@@ -2,8 +2,46 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=()">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://formspree.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; connect-src https://formspree.io; frame-ancestors 'none';">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="NetRelais — Votre partenaire informatique de confiance en Nouvelle-Aquitaine. Support, infogérance, réseau et sécurité pour TPE et PME.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230A0F1E'/><text x='4' y='22' font-family='Inter,sans-serif' font-size='14' font-weight='700' fill='white'>NR</text><rect x='4' y='25' width='10' height='2.5' rx='1' fill='%23FF5C00'/></svg>">
+<meta name="description" content="NetRelais — Infogérance & support informatique pour TPE et PME en Nouvelle-Aquitaine. Supervision réseau, sécurité, cloud. À partir de 13,90€/poste/mois. Audit gratuit.">
+<meta name="keywords" content="infogérance Nouvelle-Aquitaine, support informatique TPE PME, maintenance informatique Bordeaux, infogérance Bordeaux, prestataire informatique Nouvelle-Aquitaine, support réseau entreprise, MSP Nouvelle-Aquitaine">
+<meta name="author" content="NetRelais">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.netrelais.fr">
+<meta property="og:title" content="NetRelais — Infogérance & Support IT en Nouvelle-Aquitaine">
+<meta property="og:description" content="Votre partenaire informatique de proximité. Supervision, réseau, cloud, sécurité. À partir de 13,90€/poste. Audit gratuit sans engagement.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.netrelais.fr">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="NetRelais — Infogérance & Support IT Nouvelle-Aquitaine">
+<meta name="twitter:description" content="Infogérance & support informatique pour TPE/PME. Audit gratuit. 06 10 79 64 40">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "NetRelais",
+  "description": "Infogérance et support informatique pour TPE et PME en Nouvelle-Aquitaine",
+  "url": "https://www.netrelais.fr",
+  "telephone": "+33610796440",
+  "email": "contact@netrelais.fr",
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "Nouvelle-Aquitaine",
+    "addressCountry": "FR"
+  },
+  "sameAs": ["https://www.linkedin.com/in/netrelais-it-68785a40b/"],
+  "priceRange": "€€",
+  "openingHours": "Mo-Fr 09:00-18:00",
+  "areaServed": "Nouvelle-Aquitaine"
+}
+</script>
 <title>NetRelais — IT de confiance en Nouvelle-Aquitaine</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;500;600;700;800&family=Sora:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -294,6 +332,9 @@
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div style="display:flex;align-items:center;gap:.5rem;">
+    <a href="https://www.linkedin.com/in/netrelais-it-68785a40b/" target="_blank" rel="noopener" title="LinkedIn NetRelais" style="display:flex;align-items:center;color:#9E9E9E;transition:color .2s;" onmouseover="this.style.color='#0A66C2'" onmouseout="this.style.color='#9E9E9E'">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+    </a>
     <a class="nav-phone" href="tel:+33610796440" style="text-decoration:none;color:var(--blue);font-weight:500;font-size:13px;">📞 06 10 79 64 40</a>
     <a class="nav-cta" href="#contact">Demander un devis</a>
   </div>
@@ -846,21 +887,19 @@ document.getElementById('optionOverlay').addEventListener('click', function(e) {
         <div style="font-size:14px;color:var(--blue-light);display:flex;align-items:center;gap:10px;">
           <span>📞</span> 06 10 79 64 40
         </div>
-        <div style="font-size:14px;color:var(--blue-light);display:flex;align-items:center;gap:10px;">
-          <span>✉️</span> contact@netrelais.fr
-        </div>
+
         <div style="font-size:14px;color:var(--blue-light);display:flex;align-items:center;gap:10px;">
           <span>📍</span> Nouvelle-Aquitaine
         </div>
       </div>
     </div>
-    <form class="contact-form" action="https://formspree.io/f/xpwzgdvk" method="POST" id="contactForm">
+    <form class="contact-form" action="https://formspree.io/f/mpqnwaqk" method="POST" id="contactForm">
       <input type="text" name="nom" placeholder="Votre nom &amp; prénom" required>
       <input type="text" name="entreprise" placeholder="Nom de votre entreprise">
       <input type="email" name="email" placeholder="Votre email" required>
       <input type="tel" name="telephone" placeholder="Votre téléphone">
-      <input type="hidden" name="_replyto" value="netrelais.contact@gmail.com">
-      <input type="hidden" name="_subject" value="Nouvelle demande de contact — NetRelais">
+      <input type="hidden" name="_replyto" value="contact@netrelais.fr">
+      <input type="hidden" name="_subject" value="[NetRelais] Nouvelle demande de contact">
       <textarea name="message" placeholder="Décrivez votre situation IT en quelques mots..." required></textarea>
       <button type="submit" id="submitBtn">Demander mon audit gratuit →</button>
       <div id="formSuccess" style="display:none;background:rgba(29,158,117,0.15);border:1px solid #1D9E75;border-radius:8px;padding:12px;color:#E1F5EE;font-size:14px;text-align:center;">
@@ -875,7 +914,7 @@ document.getElementById('optionOverlay').addEventListener('click', function(e) {
         btn.disabled = true;
         const data = new FormData(this);
         try {
-          const res = await fetch("https://formspree.io/f/xpwzgdvk", { method:"POST", body:data, headers:{Accept:"application/json"} });
+          const res = await fetch("https://formspree.io/f/mpqnwaqk", { method:"POST", body:data, headers:{Accept:"application/json"} });
           if (res.ok) {
             document.getElementById("formSuccess").style.display = "block";
             this.reset();
@@ -934,6 +973,28 @@ document.getElementById('optionOverlay').addEventListener('click', function(e) {
       </details>
 
     </div>
+  </div>
+</section>
+
+<!-- RUSTDESK -->
+<section style="background:#0A0F1E;padding:40px 5%;text-align:center;">
+  <div style="max-width:680px;margin:0 auto;">
+    <div style="font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#4D9FFF;margin-bottom:.6rem;">Prise en main à distance</div>
+    <div style="font-family:Sora,sans-serif;font-size:20px;font-weight:600;color:#E8EEF8;margin-bottom:.6rem;">Télécharger l'outil de prise en main à distance</div>
+    <p style="font-size:14px;color:#3A5070;line-height:1.7;margin-bottom:1.75rem;">Installez RustDesk sur votre poste pour permettre à votre technicien NetRelais d'intervenir à distance en toute sécurité, sans manipulation de votre part.</p>
+    <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
+      <a href="https://github.com/rustdesk/rustdesk/releases/download/1.4.6/rustdesk-1.4.6-x86_64.exe"
+         style="display:inline-flex;align-items:center;gap:10px;background:#1A2A40;border:1px solid #1E3A5C;color:#E8EEF8;text-decoration:none;padding:12px 22px;border-radius:10px;font-size:14px;font-weight:500;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4D9FFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        Télécharger — Windows (.exe)
+      </a>
+      <a href="https://github.com/rustdesk/rustdesk/releases/download/1.4.6/rustdesk-1.4.6.dmg"
+         style="display:inline-flex;align-items:center;gap:10px;background:#1A2A40;border:1px solid #1E3A5C;color:#E8EEF8;text-decoration:none;padding:12px 22px;border-radius:10px;font-size:14px;font-weight:500;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4D9FFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        Télécharger — macOS (.dmg)
+      </a>
+    </div>
+    <p style="font-size:12px;color:#6B8CAE;margin-top:1.25rem;">RustDesk est un logiciel open source, gratuit et sécurisé. Aucune donnée personnelle collectée.</p>
   </div>
 </section>
 
