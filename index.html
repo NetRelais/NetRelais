@@ -3,9 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230A0F1E'/><text x='4' y='22' font-family='Inter,sans-serif' font-size='14' font-weight='700' fill='white'>NR</text><rect x='4' y='25' width='10' height='2.5' rx='1' fill='%23FF5C00'/></svg>">
 <meta name="description" content="NetRelais — Votre partenaire informatique de confiance en Nouvelle-Aquitaine. Support, infogérance, réseau et sécurité pour TPE et PME.">
 <title>NetRelais — IT de confiance en Nouvelle-Aquitaine</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;500;600;700;800&family=Sora:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -279,11 +281,12 @@
 
 <!-- NAV -->
 <nav>
-  <a class="nav-logo" href="#">
-    <div class="nav-logo-icon">
-      <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-    </div>
-    <span class="nav-logo-name">NetRelais</span>
+  <a class="nav-logo" href="#" style="text-decoration:none;display:flex;align-items:center;">
+    <svg xmlns="http://www.w3.org/2000/svg" height="38" viewBox="0 0 520 100" style="display:block;">
+      <text y="78" font-family="'Plus Jakarta Sans','Helvetica Neue',Arial,sans-serif" font-size="78" font-weight="200" letter-spacing="8" fill="#111111">NET</text>
+      <text x="228" y="78" font-family="'Plus Jakarta Sans','Helvetica Neue',Arial,sans-serif" font-size="78" font-weight="200" letter-spacing="8" fill="#111111">RELAIS</text>
+      <rect x="228" y="86" width="52" height="4" rx="2" fill="#FF5C00"/>
+    </svg>
   </a>
   <ul class="nav-links">
     <li><a href="#solutions">Nos solutions</a></li>
@@ -292,10 +295,17 @@
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div style="display:flex;align-items:center;gap:.5rem;">
-    <span class="nav-phone">📞 06 XX XX XX XX</span>
+    <a class="nav-phone" href="tel:+33610796440" style="text-decoration:none;color:var(--blue);font-weight:500;font-size:13px;">📞 06 10 79 64 40</a>
     <a class="nav-cta" href="#contact">Demander un devis</a>
   </div>
 </nav>
+<div style="background:#FF5C00;padding:8px 5%;display:flex;align-items:center;justify-content:center;gap:2rem;flex-wrap:wrap;">
+  <span style="font-size:12px;font-weight:600;color:white;letter-spacing:1px;">⚡ RÉPONSE GARANTIE SOUS 4H</span>
+  <span style="font-size:12px;color:rgba(255,255,255,0.7);">·</span>
+  <span style="font-size:12px;color:rgba(255,255,255,0.85);">Sans engagement · Audit gratuit</span>
+  <span style="font-size:12px;color:rgba(255,255,255,0.7);">·</span>
+  <a href="tel:+33610796440" style="font-size:12px;font-weight:600;color:white;text-decoration:none;background:rgba(255,255,255,0.15);padding:4px 14px;border-radius:20px;">📞 06 10 79 64 40</a>
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -306,6 +316,7 @@
     <div class="hero-btns">
       <a class="btn-primary" href="#offres">Voir les offres</a>
       <a class="btn-outline" href="#contact">Audit gratuit</a>
+      <a class="btn-outline" href="tel:+33610796440" style="display:flex;align-items:center;gap:6px;">📞 Appel direct</a>
     </div>
   </div>
   <div class="hero-visual">
@@ -406,22 +417,31 @@
       <span class="se-item">Contrôle de votre budget</span>
     </div>
   </div>
+
+  <!-- CARTES OFFRES -->
   <div class="offres-grid">
     <div class="offre-card">
       <div class="offre-emoji">🛵</div>
       <div class="offre-name">Net'Start</div>
       <div class="offre-reaction">Assistance sous 24h ouvrées</div>
-      <div class="offre-price">249 <span>€ HT / mois</span></div>
+      <div class="offre-price">13<span style="font-size:22px;">,90</span> <span>€ HT / poste / mois</span></div>
+      <div style="font-size:12px;color:var(--gray-mid);margin-top:-6px;">soit ~278€/mois pour 20 postes</div>
       <div class="offre-desc">Une assistance fiable pour une continuité assurée. Idéal pour les très petites structures.</div>
       <ul class="offre-features">
-        <li>Supervision serveurs &amp; réseau</li>
-        <li>Mises à jour &amp; sauvegardes</li>
-        <li>Support par email et ticket</li>
-        <li>Rapport mensuel de l'infra</li>
-        <li>Accès distant sécurisé</li>
-        <li class="no">Interventions sur site incluses</li>
-        <li class="no">Gestion Active Directory</li>
+        <li>Supervision réseau &amp; postes</li>
+        <li>Mises à jour &amp; correctifs de sécurité</li>
+        <li>Support par email (réponse sous 24h)</li>
+        <li>Prise en main à distance illimitée</li>
+        <li>Rapport mensuel de l'infrastructure</li>
+        <li class="no">Onboarding / Offboarding collaborateurs</li>
+        <li class="no">Gestion sécurité du parc</li>
+        <li class="no">Gestion des garanties</li>
       </ul>
+      <div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--gray-light);">
+        <div style="font-size:11px;font-weight:600;color:var(--gray-mid);letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;">Options en +</div>
+        <button onclick="showOption('parc')" style="font-size:13px;color:var(--blue);font-weight:500;background:none;border:none;cursor:pointer;padding:0;display:block;margin-bottom:4px;text-decoration:underline;text-underline-offset:3px;">+ Gestion du parc informatique</button>
+        <button onclick="showOption('si')" style="font-size:13px;color:var(--blue);font-weight:500;background:none;border:none;cursor:pointer;padding:0;display:block;text-decoration:underline;text-underline-offset:3px;">+ SI Externalisé</button>
+      </div>
       <a class="offre-btn" href="#contact">Demander un devis</a>
     </div>
 
@@ -430,17 +450,24 @@
       <div class="offre-emoji">🏎️</div>
       <div class="offre-name">Net'Boost</div>
       <div class="offre-reaction">Assistance sous 12h ouvrées</div>
-      <div class="offre-price">449 <span>€ HT / mois</span></div>
+      <div class="offre-price">20<span style="font-size:22px;">,90</span> <span>€ HT / poste / mois</span></div>
+      <div style="font-size:12px;color:var(--gray-mid);margin-top:-6px;">soit ~418€/mois pour 20 postes</div>
       <div class="offre-desc">Une prise en charge accélérée pour plus de sérénité. Couverture complète pour 5 à 30 postes.</div>
       <ul class="offre-features">
         <li>Tout le pack Net'Start</li>
-        <li>Support téléphonique dédié</li>
-        <li>Gestion utilisateurs (AD, mail)</li>
-        <li>1 intervention sur site / trimestre</li>
-        <li>Onboarding des collaborateurs</li>
-        <li>Administration Office 365 &amp; Google</li>
-        <li class="no">Interventions sur site illimitées</li>
+        <li>Support téléphonique (réponse sous 12h)</li>
+        <li>Supervision du parc sous 4h</li>
+        <li>Gestion connexions internet (Fibre, 4G)</li>
+        <li>Administration Office 365 &amp; Google Workspace</li>
+        <li>Onboarding / Offboarding des collaborateurs</li>
+        <li>Gestion sécurité du parc (antivirus, MdP, MAJ)</li>
+        <li>Gestion des garanties (copieurs, ordinateurs…)</li>
       </ul>
+      <div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--gray-light);">
+        <div style="font-size:11px;font-weight:600;color:var(--gray-mid);letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;">Options en +</div>
+        <button onclick="showOption('parc')" style="font-size:13px;color:var(--blue);font-weight:500;background:none;border:none;cursor:pointer;padding:0;display:block;margin-bottom:4px;text-decoration:underline;text-underline-offset:3px;">+ Gestion du parc informatique</button>
+        <button onclick="showOption('si')" style="font-size:13px;color:var(--blue);font-weight:500;background:none;border:none;cursor:pointer;padding:0;display:block;text-decoration:underline;text-underline-offset:3px;">+ SI Externalisé</button>
+      </div>
       <a class="offre-btn primary" href="#contact">Demander un devis</a>
     </div>
 
@@ -448,21 +475,276 @@
       <div class="offre-emoji">🚀</div>
       <div class="offre-name">Net'Max</div>
       <div class="offre-reaction">Assistance sous 4h ouvrées</div>
-      <div class="offre-price">699 <span>€ HT / mois</span></div>
+      <div class="offre-price">27<span style="font-size:22px;">,90</span> <span>€ HT / poste / mois</span></div>
+      <div style="font-size:12px;color:var(--gray-mid);margin-top:-6px;">soit ~558€/mois pour 20 postes</div>
       <div class="offre-desc">Une réactivité immédiate pour une gestion sans attente. Pour les infras hybrides ou cloud.</div>
       <ul class="offre-features">
         <li>Tout le pack Net'Boost</li>
+        <li>Intervention sur site illimitée</li>
+        <li>Visite sur site minimum par mois</li>
+        <li>Gestion réseau local (câblage, Wi-Fi)</li>
+        <li>Gestion VPN &amp; sécurité avancée</li>
         <li>Gestion cloud (Azure / AWS)</li>
-        <li>Audit sécurité semestriel</li>
-        <li>Interventions sur site illimitées</li>
-        <li>Astreinte le samedi matin</li>
-        <li>DSI externalisé &amp; conseil stratégique</li>
         <li>Relation opérateurs &amp; hébergeurs</li>
+        <li>Gestion serveurs production &amp; sauvegarde</li>
+        <li>Audit sécurité semestriel</li>
       </ul>
+      <div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--gray-light);">
+        <div style="font-size:11px;font-weight:600;color:var(--gray-mid);letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;">Options en +</div>
+        <button onclick="showOption('parc')" style="font-size:13px;color:var(--blue);font-weight:500;background:none;border:none;cursor:pointer;padding:0;display:block;margin-bottom:4px;text-decoration:underline;text-underline-offset:3px;">+ Gestion du parc informatique</button>
+        <button onclick="showOption('si')" style="font-size:13px;color:var(--blue);font-weight:500;background:none;border:none;cursor:pointer;padding:0;display:block;margin-bottom:4px;text-decoration:underline;text-underline-offset:3px;">+ SI Externalisé (sur devis)</button>
+        <button onclick="showOption('astreinte')" style="font-size:13px;color:var(--blue);font-weight:500;background:none;border:none;cursor:pointer;padding:0;display:block;text-decoration:underline;text-underline-offset:3px;">+ Astreinte week-end (sur devis)</button>
+      </div>
       <a class="offre-btn" href="#contact">Demander un devis</a>
     </div>
   </div>
+
+  <!-- TABLEAU COMPARATIF -->
+  <div style="margin-top:3rem;">
+    <div style="font-family:Sora,sans-serif;font-size:20px;font-weight:600;color:var(--navy);text-align:center;margin-bottom:.5rem;">Comparatif détaillé</div>
+    <p style="text-align:center;font-size:14px;color:var(--gray-mid);margin-bottom:2rem;">Toutes les offres incluent un interlocuteur unique basé en Nouvelle-Aquitaine</p>
+    <div style="overflow-x:auto;border-radius:var(--radius);border:1px solid var(--gray-light);">
+    <table style="width:100%;border-collapse:collapse;font-size:14px;min-width:580px;">
+      <thead>
+        <tr>
+          <th style="text-align:left;padding:16px 20px;background:#F8F9FC;color:var(--gray-mid);font-weight:500;font-size:12px;letter-spacing:.05em;text-transform:uppercase;border-bottom:1px solid var(--gray-light);width:42%;"></th>
+          <th style="text-align:center;padding:16px 12px;background:#F8F9FC;border-bottom:1px solid var(--gray-light);">
+            <div style="font-size:18px;margin-bottom:4px;">🛵</div>
+            <div style="font-weight:600;color:var(--navy);font-size:14px;">Net'Start</div>
+            <div style="font-size:12px;color:var(--gray-mid);margin-top:2px;">13,90 €<span style="font-size:10px;">/poste</span></div>
+          </th>
+          <th style="text-align:center;padding:16px 12px;background:#EBF4FF;border-bottom:2px solid var(--blue-mid);">
+            <div style="font-size:18px;margin-bottom:4px;">🏎️</div>
+            <div style="font-weight:600;color:var(--navy);font-size:14px;">Net'Boost</div>
+            <div style="font-size:12px;color:var(--blue);margin-top:2px;">20,90 €<span style="font-size:10px;">/poste</span></div>
+            <div style="font-size:10px;background:var(--blue-mid);color:white;border-radius:10px;padding:2px 8px;margin-top:4px;display:inline-block;">Populaire</div>
+          </th>
+          <th style="text-align:center;padding:16px 12px;background:#F8F9FC;border-bottom:1px solid var(--gray-light);">
+            <div style="font-size:18px;margin-bottom:4px;">🚀</div>
+            <div style="font-weight:600;color:var(--navy);font-size:14px;">Net'Max</div>
+            <div style="font-size:12px;color:var(--gray-mid);margin-top:2px;">27,90 €<span style="font-size:10px;">/poste</span></div>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <!-- RÉACTIVITÉ -->
+        <tr style="background:#F0F4F8;">
+          <td colspan="4" style="padding:8px 20px;font-size:11px;font-weight:700;color:var(--gray-mid);letter-spacing:.1em;text-transform:uppercase;">Réactivité &amp; support</td>
+        </tr>
+        <tr style="background:white;">
+          <td style="padding:13px 20px;border-bottom:1px solid #F0F0F0;color:var(--gray-dark);">Temps de réponse garanti</td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;font-weight:600;color:var(--navy);">24h</td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;font-weight:600;color:var(--blue);">12h</td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;font-weight:600;color:var(--navy);">4h</td>
+        </tr>
+        <tr style="background:#FAFAFA;">
+          <td style="padding:13px 20px;border-bottom:1px solid #F0F0F0;">Support par email &amp; ticket</td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:16px;">✓</td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;color:#1D9E75;font-size:16px;">✓</td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:16px;">✓</td>
+        </tr>
+        <tr style="background:white;">
+          <td style="padding:13px 20px;border-bottom:1px solid #F0F0F0;">Support téléphonique dédié</td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#D0D0D0;font-size:16px;">—</td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;color:#1D9E75;font-size:16px;">✓</td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:16px;">✓</td>
+        </tr>
+
+        <!-- SUPERVISION -->
+        <tr style="background:#F0F4F8;">
+          <td colspan="4" style="padding:8px 20px;font-size:11px;font-weight:700;color:var(--gray-mid);letter-spacing:.1em;text-transform:uppercase;">Supervision &amp; maintenance</td>
+        </tr>
+        <tr style="background:white;">
+          <td style="padding:13px 20px;border-bottom:1px solid #F0F0F0;">Supervision réseau &amp; postes</td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:16px;">✓</td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;color:#1D9E75;font-size:16px;">✓</td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:16px;">✓</td>
+        </tr>
+        <tr style="background:#FAFAFA;">
+          <td style="padding:13px 20px;border-bottom:1px solid #F0F0F0;">Mises à jour &amp; correctifs sécurité</td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:16px;">✓</td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;color:#1D9E75;font-size:16px;">✓</td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:16px;">✓</td>
+        </tr>
+        <tr style="background:white;">
+          <td style="padding:13px 20px;border-bottom:1px solid #F0F0F0;">Prise en main à distance illimitée</td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:16px;">✓</td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;color:#1D9E75;font-size:16px;">✓</td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:16px;">✓</td>
+        </tr>
+        <tr style="background:#FAFAFA;">
+          <td style="padding:13px 20px;border-bottom:1px solid #F0F0F0;">Rapport mensuel infrastructure</td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:16px;">✓</td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;color:#1D9E75;font-size:16px;">✓</td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:16px;">✓</td>
+        </tr>
+
+        <!-- GESTION UTILISATEURS -->
+        <tr style="background:#F0F4F8;">
+          <td colspan="4" style="padding:8px 20px;font-size:11px;font-weight:700;color:var(--gray-mid);letter-spacing:.1em;text-transform:uppercase;">Gestion utilisateurs &amp; sécurité</td>
+        </tr>
+        <tr style="background:white;">
+          <td style="padding:13px 20px;border-bottom:1px solid #F0F0F0;">Onboarding / Offboarding collaborateurs</td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#D0D0D0;font-size:16px;">—</td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;color:#1D9E75;font-size:16px;">✓</td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:16px;">✓</td>
+        </tr>
+        <tr style="background:#FAFAFA;">
+          <td style="padding:13px 20px;border-bottom:1px solid #F0F0F0;">Gestion sécurité du parc <span style="font-size:12px;color:var(--gray-mid);">(antivirus, MdP, MAJ)</span></td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#D0D0D0;font-size:16px;">—</td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;color:#1D9E75;font-size:16px;">✓</td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:16px;">✓</td>
+        </tr>
+        <tr style="background:white;">
+          <td style="padding:13px 20px;border-bottom:1px solid #F0F0F0;">Administration Office 365 &amp; Google Workspace</td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#D0D0D0;font-size:16px;">—</td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;color:#1D9E75;font-size:16px;">✓</td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:16px;">✓</td>
+        </tr>
+        <tr style="background:#FAFAFA;">
+          <td style="padding:13px 20px;border-bottom:1px solid #F0F0F0;">Gestion des garanties <span style="font-size:12px;color:var(--gray-mid);">(copieurs, ordis…)</span></td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#D0D0D0;font-size:16px;">—</td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;color:#1D9E75;font-size:16px;">✓</td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:16px;">✓</td>
+        </tr>
+
+        <!-- TERRAIN -->
+        <tr style="background:#F0F4F8;">
+          <td colspan="4" style="padding:8px 20px;font-size:11px;font-weight:700;color:var(--gray-mid);letter-spacing:.1em;text-transform:uppercase;">Interventions &amp; infrastructure</td>
+        </tr>
+        <tr style="background:white;">
+          <td style="padding:13px 20px;border-bottom:1px solid #F0F0F0;">Intervention sur site illimitée</td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#D0D0D0;font-size:16px;">—</td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;color:#D0D0D0;font-size:16px;">—</td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:16px;">✓</td>
+        </tr>
+        <tr style="background:#FAFAFA;">
+          <td style="padding:13px 20px;border-bottom:1px solid #F0F0F0;">Visite sur site mensuelle</td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#D0D0D0;font-size:16px;">—</td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;color:#D0D0D0;font-size:16px;">—</td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:16px;">✓</td>
+        </tr>
+        <tr style="background:white;">
+          <td style="padding:13px 20px;border-bottom:1px solid #F0F0F0;">Gestion réseau local <span style="font-size:12px;color:var(--gray-mid);">(câblage, Wi-Fi, VPN)</span></td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#D0D0D0;font-size:16px;">—</td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;color:#D0D0D0;font-size:16px;">—</td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:16px;">✓</td>
+        </tr>
+        <tr style="background:#FAFAFA;">
+          <td style="padding:13px 20px;border-bottom:1px solid #F0F0F0;">Gestion cloud <span style="font-size:12px;color:var(--gray-mid);">(Azure / AWS)</span></td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#D0D0D0;font-size:16px;">—</td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;color:#D0D0D0;font-size:16px;">—</td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:16px;">✓</td>
+        </tr>
+        <tr style="background:white;">
+          <td style="padding:13px 20px;border-bottom:1px solid #F0F0F0;">Gestion serveurs &amp; sauvegardes</td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#D0D0D0;font-size:16px;">—</td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;color:#D0D0D0;font-size:16px;">—</td>
+          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:16px;">✓</td>
+        </tr>
+        <tr style="background:#FAFAFA;">
+          <td style="padding:13px 20px;">Audit sécurité semestriel</td>
+          <td style="text-align:center;padding:13px 12px;color:#D0D0D0;font-size:16px;">—</td>
+          <td style="text-align:center;padding:13px 12px;background:#F5FAFF;color:#D0D0D0;font-size:16px;">—</td>
+          <td style="text-align:center;padding:13px 12px;color:#1D9E75;font-size:16px;">✓</td>
+        </tr>
+
+      </tbody>
+      <tfoot>
+        <tr>
+          <td style="padding:16px 20px;background:#F8F9FC;border-top:1px solid var(--gray-light);"></td>
+          <td style="text-align:center;padding:16px 12px;background:#F8F9FC;border-top:1px solid var(--gray-light);"><a href="#contact" class="offre-btn" style="display:inline-block;padding:10px 18px;">Choisir</a></td>
+          <td style="text-align:center;padding:16px 12px;background:#EBF4FF;border-top:2px solid var(--blue-mid);"><a href="#contact" class="offre-btn primary" style="display:inline-block;padding:10px 18px;">Choisir</a></td>
+          <td style="text-align:center;padding:16px 12px;background:#F8F9FC;border-top:1px solid var(--gray-light);"><a href="#contact" class="offre-btn" style="display:inline-block;padding:10px 18px;">Choisir</a></td>
+        </tr>
+      </tfoot>
+    </table>
+    </div>
+  </div>
+  </div>
 </section>
+
+<!-- OPTIONS EN + — MODALE SLIDE -->
+<div id="optionOverlay" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.55);z-index:999;align-items:center;justify-content:center;">
+  <div id="optionPanel" style="background:white;border-radius:16px;padding:2.5rem;max-width:560px;width:90%;margin:auto;position:relative;max-height:85vh;overflow-y:auto;">
+    <button onclick="closeOption()" style="position:absolute;top:16px;right:16px;background:none;border:none;font-size:22px;cursor:pointer;color:#888;line-height:1;">✕</button>
+
+    <!-- PARC INFORMATIQUE -->
+    <div id="opt-parc">
+      <div style="font-size:11px;font-weight:700;color:var(--blue);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.5rem;">Option complémentaire</div>
+      <div style="font-family:Sora,sans-serif;font-size:24px;font-weight:600;color:var(--navy);margin-bottom:.25rem;">Gestion du parc informatique</div>
+      <div style="font-size:13px;color:var(--gray-mid);margin-bottom:1.25rem;">À partir de <strong style="color:var(--navy);">sur devis</strong> HT / mois</div>
+      <p style="font-size:14px;color:var(--gray-mid);line-height:1.7;margin-bottom:1.25rem;">Confiez la supervision et l'optimisation de votre parc informatique pour une infrastructure toujours performante, sécurisée et adaptée à l'évolution de vos besoins.</p>
+      <ul class="offre-features" style="margin-bottom:1.5rem;">
+        <li>Supervision du parc informatique sous 4h</li>
+        <li>Gestion des connexions internet (Fibre FTTO &amp; FTTH, SDSL, 4G)</li>
+        <li>Prise en main à distance illimitée</li>
+        <li>Intervention sur site illimitée</li>
+        <li>Une visite sur site minimum par mois</li>
+        <li>Gestion du réseau local (câblage, Wi-Fi)</li>
+        <li>Administration Office 365 &amp; Google Workspace</li>
+        <li>Gestion VPN</li>
+        <li>Relation avec les opérateurs et hébergeurs</li>
+        <li>Gestion des serveurs (production et sauvegarde)</li>
+      </ul>
+      <a href="#contact" onclick="closeOption()" class="offre-btn primary" style="display:block;text-align:center;">Demander un devis</a>
+    </div>
+
+    <!-- SI EXTERNALISÉ -->
+    <div id="opt-si" style="display:none;">
+      <div style="font-size:11px;font-weight:700;color:var(--blue);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.5rem;">Option complémentaire</div>
+      <div style="font-family:Sora,sans-serif;font-size:24px;font-weight:600;color:var(--navy);margin-bottom:.25rem;">SI Externalisé</div>
+      <div style="font-size:13px;color:var(--gray-mid);margin-bottom:1.25rem;"><strong style="color:var(--navy);">Sur devis</strong></div>
+      <p style="font-size:14px;color:var(--gray-mid);line-height:1.7;margin-bottom:1.25rem;">Optez pour un SI externalisé et bénéficiez d'une gestion optimisée, sécurisée et évolutive de votre infrastructure IT, sans les contraintes internes, pour vous concentrer pleinement sur votre activité.</p>
+      <ul class="offre-features" style="margin-bottom:1.5rem;">
+        <li>Encadrement de l'organisation IT</li>
+        <li>Conseils et pilotage de projets</li>
+        <li>Optimisation de votre système d'information</li>
+        <li>Stratégie de sécurité et de sauvegarde</li>
+        <li>Rédaction documentation &amp; accompagnement des enjeux</li>
+      </ul>
+      <a href="#contact" onclick="closeOption()" class="offre-btn primary" style="display:block;text-align:center;">Demander un devis</a>
+    </div>
+
+    <!-- ASTREINTE -->
+    <div id="opt-astreinte" style="display:none;">
+      <div style="font-size:11px;font-weight:700;color:var(--blue);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.5rem;">Option complémentaire</div>
+      <div style="font-family:Sora,sans-serif;font-size:24px;font-weight:600;color:var(--navy);margin-bottom:.25rem;">Astreinte week-end</div>
+      <div style="font-size:13px;color:var(--gray-mid);margin-bottom:1.25rem;"><strong style="color:var(--navy);">Sur devis</strong></div>
+      <p style="font-size:14px;color:var(--gray-mid);line-height:1.7;margin-bottom:1.25rem;">Pour les structures qui ne peuvent pas se permettre une interruption même le week-end. Un technicien disponible le samedi matin et en cas d'urgence critique le dimanche.</p>
+      <ul class="offre-features" style="margin-bottom:1.5rem;">
+        <li>Disponibilité samedi et dimanche (9h–17h)</li>
+        <li>Astreinte téléphonique urgences critiques</li>
+        <li>Intervention à distance prioritaire</li>
+        <li>Rapport d'intervention systématique</li>
+      </ul>
+      <a href="#contact" onclick="closeOption()" class="offre-btn primary" style="display:block;text-align:center;">Demander un devis</a>
+    </div>
+
+  </div>
+</div>
+
+<script>
+function showOption(id) {
+  document.getElementById('opt-parc').style.display = 'none';
+  document.getElementById('opt-si').style.display = 'none';
+  document.getElementById('opt-astreinte').style.display = 'none';
+  document.getElementById('opt-' + id).style.display = 'block';
+  var overlay = document.getElementById('optionOverlay');
+  overlay.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+function closeOption() {
+  document.getElementById('optionOverlay').style.display = 'none';
+  document.body.style.overflow = '';
+}
+document.getElementById('optionOverlay').addEventListener('click', function(e) {
+  if (e.target === this) closeOption();
+});
+</script>
+
+
 
 <!-- ENGAGEMENTS -->
 <section class="engagements" id="engagements">
@@ -527,18 +809,14 @@
   </div>
 </section>
 
-<!-- TEMOIGNAGE -->
-<section class="temoignage">
-  <blockquote>"Un grand merci à NetRelais pour le professionnalisme et la réactivité dans la gestion de nos besoins ainsi que dans la résolution de nos problèmes. Leur expertise représente un véritable atout au quotidien."</blockquote>
-  <cite>— [Prénom Nom], Office Manager · [Secteur client]</cite>
-</section>
+
 
 <!-- TARIFICATION -->
 <section class="tarification">
   <div class="section-center">
     <div class="section-label">Tarification</div>
     <div class="section-title">Un tarif transparent &amp; sans surprise</div>
-    <p class="section-sub">Notre tarification est claire, flexible et sans coûts cachés. En province, nos prix sont 20 à 30% inférieurs aux tarifs pratiqués à Paris. Pas de TVA si CA &lt; 36 800 €/an (auto-entrepreneur).</p>
+    <p class="section-sub">Pas de frais cachés, pas de mauvaise surprise. Un forfait fixe au poste, ajusté à la taille réelle de votre structure.</p>
   </div>
   <div class="tarif-boxes">
     <div class="tarif-box">
@@ -567,7 +845,7 @@
       <p>Je vous propose un audit gratuit de 1h de votre installation, sans engagement. Basé en Nouvelle-Aquitaine, je me déplace chez vous ou interviens à distance.</p>
       <div style="margin-top:1.5rem;display:flex;flex-direction:column;gap:10px;">
         <div style="font-size:14px;color:var(--blue-light);display:flex;align-items:center;gap:10px;">
-          <span>📞</span> 06 XX XX XX XX
+          <span>📞</span> 06 10 79 64 40
         </div>
         <div style="font-size:14px;color:var(--blue-light);display:flex;align-items:center;gap:10px;">
           <span>✉️</span> contact@netrelais.fr
@@ -577,13 +855,85 @@
         </div>
       </div>
     </div>
-    <div class="contact-form">
-      <input type="text" placeholder="Votre nom &amp; prénom">
-      <input type="text" placeholder="Nom de votre entreprise">
-      <input type="email" placeholder="Votre email">
-      <input type="tel" placeholder="Votre téléphone">
-      <textarea placeholder="Décrivez votre situation IT en quelques mots..."></textarea>
-      <button type="button">Demander mon audit gratuit →</button>
+    <form class="contact-form" action="https://formspree.io/f/xpwzgdvk" method="POST" id="contactForm">
+      <input type="text" name="nom" placeholder="Votre nom &amp; prénom" required>
+      <input type="text" name="entreprise" placeholder="Nom de votre entreprise">
+      <input type="email" name="email" placeholder="Votre email" required>
+      <input type="tel" name="telephone" placeholder="Votre téléphone">
+      <input type="hidden" name="_replyto" value="netrelais.contact@gmail.com">
+      <input type="hidden" name="_subject" value="Nouvelle demande de contact — NetRelais">
+      <textarea name="message" placeholder="Décrivez votre situation IT en quelques mots..." required></textarea>
+      <button type="submit" id="submitBtn">Demander mon audit gratuit →</button>
+      <div id="formSuccess" style="display:none;background:rgba(29,158,117,0.15);border:1px solid #1D9E75;border-radius:8px;padding:12px;color:#E1F5EE;font-size:14px;text-align:center;">
+        ✓ Message envoyé ! Nous vous répondrons sous 24h.
+      </div>
+    </form>
+    <script>
+      document.getElementById("contactForm").addEventListener("submit", async function(e) {
+        e.preventDefault();
+        const btn = document.getElementById("submitBtn");
+        btn.textContent = "Envoi en cours...";
+        btn.disabled = true;
+        const data = new FormData(this);
+        try {
+          const res = await fetch("https://formspree.io/f/xpwzgdvk", { method:"POST", body:data, headers:{Accept:"application/json"} });
+          if (res.ok) {
+            document.getElementById("formSuccess").style.display = "block";
+            this.reset();
+            btn.textContent = "Message envoyé ✓";
+          } else {
+            btn.textContent = "Erreur — réessayez";
+            btn.disabled = false;
+          }
+        } catch(err) {
+          btn.textContent = "Erreur — réessayez";
+          btn.disabled = false;
+        }
+      });
+    </script>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="background:var(--gray-pale);padding:60px 5%;">
+  <div style="max-width:700px;margin:0 auto;">
+    <div class="section-label" style="text-align:center;">Questions fréquentes</div>
+    <div class="section-title" style="text-align:center;margin-bottom:2rem;">Ce que vous vous demandez sûrement</div>
+
+    <div style="display:flex;flex-direction:column;gap:12px;">
+
+      <details style="background:white;border:1px solid var(--gray-light);border-radius:var(--radius);padding:1.25rem;cursor:pointer;">
+        <summary style="font-weight:600;font-size:15px;color:var(--navy);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          Est-ce qu'il y a un engagement de durée ?
+          <span style="color:var(--blue-mid);font-size:20px;font-weight:300;">+</span>
+        </summary>
+        <p style="margin-top:12px;font-size:14px;color:var(--gray-mid);line-height:1.7;">Non. Toutes nos offres sont sans engagement. Un simple préavis de 30 jours par email suffit pour résilier. Pas de frais cachés, pas de pénalité.</p>
+      </details>
+
+      <details style="background:white;border:1px solid var(--gray-light);border-radius:var(--radius);padding:1.25rem;cursor:pointer;">
+        <summary style="font-weight:600;font-size:15px;color:var(--navy);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          Comment se passe la première intervention ?
+          <span style="color:var(--blue-mid);font-size:20px;font-weight:300;">+</span>
+        </summary>
+        <p style="margin-top:12px;font-size:14px;color:var(--gray-mid);line-height:1.7;">On commence par un audit gratuit de votre installation — sur site ou à distance selon votre préférence. On vous remet un rapport clair, puis on vous propose l'offre adaptée. Aucune obligation de suite.</p>
+      </details>
+
+      <details style="background:white;border:1px solid var(--gray-light);border-radius:var(--radius);padding:1.25rem;cursor:pointer;">
+        <summary style="font-weight:600;font-size:15px;color:var(--navy);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          Je n'ai que 3 ou 4 postes, c'est possible ?
+          <span style="color:var(--blue-mid);font-size:20px;font-weight:300;">+</span>
+        </summary>
+        <p style="margin-top:12px;font-size:14px;color:var(--gray-mid);line-height:1.7;">Absolument. Nos offres sont facturées au poste, donc adaptées même aux très petites structures. Pour 4 postes, le pack Net'Start revient à moins de 40 €/mois.</p>
+      </details>
+
+      <details style="background:white;border:1px solid var(--gray-light);border-radius:var(--radius);padding:1.25rem;cursor:pointer;">
+        <summary style="font-weight:600;font-size:15px;color:var(--navy);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          Intervenez-vous uniquement à distance ?
+          <span style="color:var(--blue-mid);font-size:20px;font-weight:300;">+</span>
+        </summary>
+        <p style="margin-top:12px;font-size:14px;color:var(--gray-mid);line-height:1.7;">Non, nous intervenons aussi sur site en Nouvelle-Aquitaine. Le pack Net'Boost inclut une visite trimestrielle, et le pack Net'Max des interventions illimitées.</p>
+      </details>
+
     </div>
   </div>
 </section>
@@ -592,11 +942,12 @@
 <footer>
   <div class="footer-top">
     <div>
-      <div class="footer-logo">
-        <div class="footer-logo-icon">
-          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-        </div>
-        <span class="footer-logo-name">NetRelais</span>
+      <div class="footer-logo" style="margin-bottom:1rem;">
+        <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 0 520 100" style="display:block;">
+          <text y="78" font-family="'Plus Jakarta Sans','Helvetica Neue',Arial,sans-serif" font-size="78" font-weight="200" letter-spacing="8" fill="#E8EEF8">NET</text>
+          <text x="228" y="78" font-family="'Plus Jakarta Sans','Helvetica Neue',Arial,sans-serif" font-size="78" font-weight="200" letter-spacing="8" fill="#E8EEF8">RELAIS</text>
+          <rect x="228" y="86" width="52" height="4" rx="2" fill="#FF5C00"/>
+        </svg>
       </div>
       <p class="footer-desc">Votre IT de confiance, à taille humaine. Des solutions efficaces pour la gestion de votre parc informatique en Nouvelle-Aquitaine.</p>
     </div>
@@ -621,7 +972,7 @@
     <div class="footer-col">
       <div class="footer-col-title">Contact</div>
       <ul>
-        <li><a href="tel:+33600000000">06 XX XX XX XX</a></li>
+        <li><a href="tel:+33610796440">📞 06 10 79 64 40</a></li>
         <li><a href="mailto:contact@netrelais.fr">contact@netrelais.fr</a></li>
         <li><a href="#">Nouvelle-Aquitaine</a></li>
         <li><a href="#">Mentions légales</a></li>
