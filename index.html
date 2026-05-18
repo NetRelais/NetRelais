@@ -855,7 +855,7 @@ document.getElementById('optionOverlay').addEventListener('click', function(e) {
         </div>
       </div>
     </div>
-    <form class="contact-form" action="https://formspree.io/f/xpwzgdvk" method="POST" id="contactForm">
+    <form class="contact-form" action="https://formspree.io/f/mykvyvon" method="POST" id="contactForm">
       <input type="text" name="nom" placeholder="Votre nom &amp; prénom" required>
       <input type="text" name="entreprise" placeholder="Nom de votre entreprise">
       <input type="email" name="email" placeholder="Votre email" required>
@@ -876,7 +876,7 @@ document.getElementById('optionOverlay').addEventListener('click', function(e) {
         btn.disabled = true;
         const data = new FormData(this);
         try {
-          const res = await fetch("https://formspree.io/f/xpwzgdvk", { method:"POST", body:data, headers:{Accept:"application/json"} });
+          const res = await fetch("https://formspree.io/f/mykvyvon", { method:"POST", body:data, headers:{Accept:"application/json"} });
           if (res.ok) {
             document.getElementById("formSuccess").style.display = "block";
             this.reset();
