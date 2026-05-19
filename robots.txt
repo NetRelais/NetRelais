@@ -1,6 +1,26 @@
+# robots.txt — NetRelais
+# https://www.netrelais.fr
+
 User-agent: *
 Allow: /
-Disallow: /admin/
-Disallow: /.git/
+Allow: /blog/
 
+# Exclure les ressources non pertinentes pour le SEO
+Disallow: /.git/
+Disallow: /admin/
+Disallow: /*.json$
+
+# Sitemap
 Sitemap: https://www.netrelais.fr/sitemap.xml
+
+# Crawl-delay pour éviter la surcharge
+Crawl-delay: 2
+
+# Autoriser explicitement les bots Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
