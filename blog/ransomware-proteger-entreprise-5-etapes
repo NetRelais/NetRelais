@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Guide pratique anti-ransomware pour TPE/PME : sauvegardes 3-2-1, MFA, mises à jour, phishing.">
+<meta name="keywords" content="ransomware PME, cybersécurité entreprise, sauvegarde 3-2-1, MFA">
+<meta name="author" content="NetRelais">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.netrelais.fr/blog/ransomware-proteger-entreprise-5-etapes.html">
+<meta property="og:title" content="Ransomware : comment protéger votre entreprise en 5 étapes concrètes — NetRelais">
+<meta property="og:description" content="Guide pratique anti-ransomware pour TPE/PME : sauvegardes 3-2-1, MFA, mises à jour, phishing.">
+<meta property="og:type" content="article">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<title>Ransomware : comment protéger votre entreprise en 5 étapes concrètes — NetRelais</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html,body{overflow-x:hidden;}
+:root{--navy:#0A0F1E;--blue:#1A6FD4;--orange:#FF5C00;--teal:#1D9E75;--dark:#2C2C2A;--mid:#5F5E5A;--light:#D3D1C7;--pale:#F4F2EB;--white:#fff;--r:12px;}
+body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--dark);background:var(--white);font-size:16px;line-height:1.75;}
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,.06);display:flex;align-items:center;justify-content:space-between;padding:0 5%;height:64px;box-shadow:0 2px 16px rgba(10,15,30,.06);}
+.back{font-size:13px;color:var(--mid);text-decoration:none;display:flex;align-items:center;gap:6px;font-weight:500;}
+.back:hover{color:var(--navy);}
+.ncta{background:var(--navy);color:white;padding:8px 18px;border-radius:50px;font-size:13px;font-weight:700;text-decoration:none;}
+.hero{padding:52px 5% 44px;background:var(--pale);border-bottom:1px solid var(--light);}
+.pill{display:inline-block;background:rgba(255,92,0,.1);color:var(--orange);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 14px;border-radius:20px;margin-bottom:1.25rem;}
+.hero h1{font-size:32px;font-weight:700;color:var(--navy);line-height:1.2;margin-bottom:1rem;letter-spacing:-.5px;}
+.meta{display:flex;gap:1.5rem;flex-wrap:wrap;font-size:13px;color:var(--mid);}
+.outer{max-width:1060px;margin:0 auto;padding:48px 5%;}
+.cols{display:flex;gap:3rem;align-items:flex-start;}
+.art{flex:1 1 0;min-width:0;overflow:hidden;}
+.sdb{flex:0 0 250px;width:250px;min-width:250px;max-width:250px;position:sticky;top:80px;}
+.sbc{background:var(--pale);border-radius:var(--r);padding:1.1rem 1.2rem;margin-bottom:.9rem;overflow:hidden;}
+.sbc.dark{background:var(--navy);}
+.sbc h4{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.7rem;color:var(--navy);}
+.sbc.dark h4{color:rgba(255,255,255,.45);}
+.toc-a{display:block;font-size:12px;color:var(--mid);text-decoration:none;padding:4px 10px;border-left:2px solid var(--light);border-radius:0 5px 5px 0;line-height:1.4;margin-bottom:2px;transition:all .15s;overflow:hidden;}
+.toc-a:hover,.toc-a.on{color:var(--navy);border-left-color:var(--orange);background:rgba(255,92,0,.06);font-weight:600;}
+.sb-phone{font-size:19px;font-weight:700;color:var(--navy);text-decoration:none;display:block;margin-bottom:.2rem;}
+.sb-hrs{font-size:11px;color:var(--mid);margin-bottom:.35rem;}
+.sb-mail{font-size:12px;color:var(--blue);text-decoration:none;}
+.sb-desc{font-size:12px;color:rgba(255,255,255,.6);line-height:1.55;margin-bottom:.5rem;}
+.sb-btn{display:block;text-align:center;background:white;color:var(--navy);padding:9px;border-radius:50px;font-weight:700;font-size:13px;text-decoration:none;}
+.other-a{display:block;font-size:12px;color:var(--blue);text-decoration:none;padding:6px 0;border-bottom:1px solid var(--light);line-height:1.4;}
+.other-a:last-child{border-bottom:none;padding-bottom:0;}
+.art h2{font-size:20px;font-weight:700;color:var(--navy);margin:2.5rem 0 .9rem;padding-left:14px;border-left:4px solid var(--orange);line-height:1.3;scroll-margin-top:80px;}
+.art h3{font-size:16px;font-weight:600;color:var(--navy);margin:1.75rem 0 .6rem;}
+.art p{margin-bottom:1.2rem;color:var(--dark);line-height:1.8;}
+.art ul,.art ol{padding-left:1.4rem;margin-bottom:1.2rem;}
+.art li{margin-bottom:.5rem;line-height:1.7;}
+.art strong{color:var(--navy);font-weight:600;}
+.art a{color:var(--blue);text-decoration:underline;text-underline-offset:3px;}
+.art table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:13px;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(10,15,30,.06);}
+.art th{background:var(--navy);color:white;padding:12px 14px;text-align:left;font-weight:600;font-size:12px;}
+.art td{padding:10px 14px;border-bottom:1px solid var(--light);}
+.art tr:nth-child(even) td{background:var(--pale);}
+.callout{border-radius:0 var(--r) var(--r) 0;padding:1.1rem 1.4rem;margin:1.5rem 0;border-left:4px solid var(--orange);background:#FFF8F4;}
+.callout.teal{border-left-color:var(--teal);background:#EAF3DE;}
+.callout.blue{border-left-color:var(--blue);background:#EBF2FF;}
+.callout p{margin:0;font-size:14px;}
+.cta-box{background:var(--navy);border-radius:var(--r);padding:1.75rem 2rem;margin:2.5rem 0 0;display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap;border-top:4px solid var(--orange);}
+.cta-box h3{font-size:17px;font-weight:700;color:white;margin-bottom:.3rem;}
+.cta-box p{font-size:13px;color:rgba(255,255,255,.6);margin:0;}
+.cta-box a{background:white;color:var(--navy);padding:10px 20px;border-radius:50px;font-weight:700;font-size:13px;text-decoration:none;white-space:nowrap;}
+footer{background:var(--navy);color:rgba(255,255,255,.4);text-align:center;padding:1.5rem;font-size:13px;margin-top:3rem;}
+footer a{color:rgba(255,255,255,.6);text-decoration:none;margin:0 .75rem;}
+@media(max-width:860px){.cols{flex-direction:column;}.sdb{position:static;width:100%;min-width:0;max-width:100%;flex:none;}.hero h1{font-size:24px;}}
+</style>
+</head>
+<body>
+<nav>
+  <a class="back" href="../index.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>Retour au site</a>
+  <a class="ncta" href="../index.html#contact">Audit gratuit</a>
+</nav>
+<div class="hero">
+  <div class="pill">Cybersécurité</div>
+  <h1>Ransomware : comment protéger votre entreprise en 5 étapes concrètes</h1>
+  <div class="meta"><span>📅 19 mai 2026</span><span>⏱ 7 min de lecture</span><span>📍 NetRelais · Uzerche, Corrèze</span></div>
+</div>
+<div class="outer">
+  <div class="cols">
+    <article class="art" id="art">
+      <p>En 2024, une PME française a été victime d'un ransomware <strong>toutes les 11 secondes</strong>. Les petites structures représentent 70 % des cibles des cybercriminels — précisément parce qu'elles ont des données précieuses mais des défenses insuffisantes. Bonne nouvelle : se protéger efficacement ne demande ni budget colossal ni expertise pointue.</p>
+<div class="callout"><p>⚠️ <strong>Un ransomware :</strong> un logiciel malveillant qui chiffre tous vos fichiers et réclame une rançon. Résultat : entre 3 jours et 3 semaines d'arrêt total. Coût moyen pour une PME française : <strong>45 000 €</strong>.</p></div>
+
+<h2 id="sec-0">Étape 1 — Sauvegarder selon la règle 3-2-1</h2>
+<p>C'est la protection la plus efficace et la moins chère :</p>
+<ul>
+  <li><strong>3</strong> copies de vos données</li>
+  <li>sur <strong>2</strong> supports différents (NAS local + cloud)</li>
+  <li>dont <strong>1</strong> hors site</li>
+</ul>
+<p>La plupart des PME ont une sauvegarde — mais non testée. Un fichier corrompu depuis 6 mois ne sert à rien. <strong>Testez une restauration complète au moins tous les trimestres.</strong></p>
+<div class="callout blue"><p>💡 Outils recommandés : Veeam Backup, Synology Active Backup ou Microsoft Azure Backup. NetRelais configure et teste vos sauvegardes dans le cadre de l'infogérance.</p></div>
+
+<h2 id="sec-1">Étape 2 — Mettre à jour tous les systèmes</h2>
+<p>La majorité des ransomwares exploitent des <strong>failles connues et corrigées</strong> — mais jamais installées. Ce qu'il faut mettre à jour régulièrement :</p>
+<ul>
+  <li>Windows et macOS (activez les mises à jour automatiques)</li>
+  <li>Les logiciels bureautiques (Office, Adobe…)</li>
+  <li>Le firmware de votre routeur et switches</li>
+  <li>Votre antivirus (définitions de virus)</li>
+  <li>Votre NAS et tout équipement réseau connecté</li>
+</ul>
+<p><strong>Windows 10 atteint la fin de son support en octobre 2025.</strong> Sans migration vers Windows 11, vos postes ne recevront plus aucun patch de sécurité.</p>
+
+<h2 id="sec-2">Étape 3 — Activer le MFA sur tous les comptes critiques</h2>
+<p>80 % des compromissions impliquent des identifiants volés. Le <strong>MFA (authentification à deux facteurs)</strong> bloque la quasi-totalité de ces attaques même si le mot de passe est compromis.</p>
+<table>
+  <tr><th>Service</th><th>Priorité</th><th>Comment activer</th></tr>
+  <tr><td>Microsoft 365 / Azure AD</td><td>🔴 Urgent</td><td>Portail Admin → Sécurité → MFA</td></tr>
+  <tr><td>Google Workspace</td><td>🔴 Urgent</td><td>Admin Console → Sécurité → 2-Step</td></tr>
+  <tr><td>VPN d'entreprise</td><td>🔴 Urgent</td><td>Selon la solution utilisée</td></tr>
+  <tr><td>Messagerie professionnelle</td><td>🟠 Important</td><td>Via votre fournisseur email</td></tr>
+</table>
+
+<h2 id="sec-3">Étape 4 — Former vos équipes au phishing</h2>
+<p>Le vecteur n°1 reste l'email frauduleux. <strong>Aucun antivirus ne protège contre un humain qui ouvre volontairement un fichier malveillant.</strong> Les signaux d'alarme :</p>
+<ul>
+  <li>Expéditeur avec une adresse légèrement modifiée</li>
+  <li>Urgence artificielle ("votre compte sera bloqué dans 24h")</li>
+  <li>Pièce jointe non sollicitée (.exe, .zip, .doc avec macros)</li>
+  <li>Demande de virement ou de codes d'accès par email</li>
+</ul>
+<div class="callout teal"><p>✅ Organisez un exercice de phishing interne une fois par an avec GoPhish (open source) pour mesurer la vigilance de vos équipes.</p></div>
+
+<h2 id="sec-4">Étape 5 — Cloisonner le réseau</h2>
+<p>Un ransomware qui infecte un poste se propage latéralement sur tout le réseau. Le cloisonnement limite la casse :</p>
+<ul>
+  <li><strong>Séparez le Wi-Fi invité du réseau interne</strong></li>
+  <li>Limitez les droits administrateurs</li>
+  <li>Segmentez le réseau par VLAN si possible</li>
+  <li>Désactivez RDP s'il n'est pas utilisé</li>
+</ul>
+
+<h2 id="sec-5">Ce que ça coûte vs ce que ça évite</h2>
+<table>
+  <tr><th>Mesure</th><th>Coût mensuel</th><th>Risque évité</th></tr>
+  <tr><td>Sauvegarde cloud</td><td>20–50 €</td><td>Perte totale des données</td></tr>
+  <tr><td>Antivirus centralisé</td><td>5–10 €/poste</td><td>Infection malware</td></tr>
+  <tr><td>MFA</td><td>Gratuit à 3 €/user</td><td>80 % des compromissions</td></tr>
+  <tr><td>Infogérance complète</td><td>17–35 €/poste</td><td>Couverture totale</td></tr>
+  <tr><td><strong>Total (15 postes)</strong></td><td><strong>~500 €/mois</strong></td><td><strong>Coût incident : 45 000 €</strong></td></tr>
+</table>
+<p>La cybersécurité n'est pas une dépense — c'est une assurance. Et comme toute assurance, on regrette de ne pas l'avoir prise quand le sinistre arrive.</p>
+      <div class="cta-box">
+        <div><h3>Un projet IT ? Parlons-en.</h3><p>Audit gratuit — 1h, sans engagement, en Nouvelle-Aquitaine.</p></div>
+        <a href="../index.html#contact">Demander mon audit →</a>
+      </div>
+    </article>
+    <aside class="sdb">
+      <div class="sbc dark"><h4>🎯 Audit gratuit</h4><p class="sb-desc">TPE/PME en Nouvelle-Aquitaine ? 1h gratuite.</p><a class="sb-btn" href="../index.html#contact">Prendre rendez-vous</a></div>
+      <div class="sbc"><h4>📞 Contact</h4><a class="sb-phone" href="tel:+33610796440">06 10 79 64 40</a><p class="sb-hrs">Lun–Ven · 9h–18h</p><a class="sb-mail" href="mailto:contact@netrelais.fr">contact@netrelais.fr</a></div>
+      <div class="sbc"><h4>📖 Autres articles</h4><a href="pourquoi-externaliser-informatique-pme-correze.html" class="other-a">Pourquoi externaliser son IT en Corrèze ?</a>
+<a href="infogerance-vs-dsi-interne-tpe.html" class="other-a">Infogérance vs DSI interne : le comparatif</a>
+</div>
+    </aside>
+  </div>
+</div>
+<footer>
+  <a href="../index.html">← Retour au site</a>
+  <a href="../index.html#offres">Nos offres</a>
+  <a href="mailto:contact@netrelais.fr">contact@netrelais.fr</a>
+  <p style="margin-top:.75rem;">© 2026 NetRelais · Uzerche, Corrèze</p>
+</footer>
+
+</body>
+</html>
