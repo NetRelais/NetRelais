@@ -9,13 +9,14 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://formspree.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; connect-src https://formspree.io; frame-ancestors 'none';">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230A0F1E'/><text x='4' y='22' font-family='Inter,sans-serif' font-size='14' font-weight='700' fill='white'>NR</text><rect x='4' y='25' width='10' height='2.5' rx='1' fill='%23FF5C00'/></svg>">
-<meta name="description" content="NetRelais — Infogérance & support informatique pour TPE et PME en Nouvelle-Aquitaine. Supervision réseau, sécurité, cloud. À partir de 13,90€/poste/mois. Audit gratuit.">
-<meta name="keywords" content="infogérance Nouvelle-Aquitaine, support informatique TPE PME, maintenance informatique Bordeaux, infogérance Bordeaux, prestataire informatique Nouvelle-Aquitaine, support réseau entreprise, MSP Nouvelle-Aquitaine">
+<meta name="description" content="NetRelais — Infogérance & support informatique pour TPE et PME en Nouvelle-Aquitaine. Supervision réseau, sécurité, cloud. À partir de 16,70€/poste/mois. Audit gratuit.">
+<meta name="keywords" content="infogérance Nouvelle-Aquitaine, support informatique TPE PME, maintenance informatique, infogérance Uzerche, prestataire informatique Corrèze, support réseau entreprise, MSP Nouvelle-Aquitaine, infogérance Corrèze, informatique Uzerche, DSI externalisé Nouvelle-Aquitaine">
 <meta name="author" content="NetRelais">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://www.netrelais.fr">
+<link rel="canonical" href="https://www.netrelais.fr/">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
 <meta property="og:title" content="NetRelais — Infogérance & Support IT en Nouvelle-Aquitaine">
-<meta property="og:description" content="Votre partenaire informatique de proximité. Supervision, réseau, cloud, sécurité. À partir de 13,90€/poste. Audit gratuit sans engagement.">
+<meta property="og:description" content="Votre partenaire informatique de proximité. Supervision, réseau, cloud, sécurité. À partir de 16,70€/poste. Audit gratuit sans engagement.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.netrelais.fr">
 <meta property="og:locale" content="fr_FR">
@@ -39,11 +40,25 @@
   "sameAs": ["https://www.linkedin.com/in/netrelais-it-68785a40b/"],
   "priceRange": "€€",
   "openingHours": "Mo-Fr 09:00-18:00",
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00"}
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Offres d'infogérance NetRelais",
+    "itemListElement": [
+      {"@type": "Offer", "name": "Net'Start", "price": "17", "priceCurrency": "EUR", "description": "Infogérance de base, réponse sous 24h"},
+      {"@type": "Offer", "name": "Net'Boost", "price": "25", "priceCurrency": "EUR", "description": "Infogérance complète, réponse sous 12h"},
+      {"@type": "Offer", "name": "Net'Max", "price": "35", "priceCurrency": "EUR", "description": "Infogérance premium, réponse sous 4h"}
+    ]
+  },
   "areaServed": "Nouvelle-Aquitaine"
 }
 </script>
 <title>NetRelais — IT de confiance en Nouvelle-Aquitaine</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://formspree.io">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;500;600;700;800&family=Sora:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -67,13 +82,24 @@
   }
 
   html { scroll-behavior: smooth; }
-  body { font-family: 'Inter', sans-serif; color: var(--gray-dark); background: var(--white); font-size: 16px; line-height: 1.6; }
+  body { font-family: 'Plus Jakarta Sans','Inter', sans-serif; color: var(--gray-dark); background: var(--white); font-size: 17px; line-height: 1.7; }
+
+  /* ── OMBRES GLOBALES (inspiration Roux Informatique) ── */
+  .solution-card { box-shadow: 0 2px 12px rgba(10,15,30,0.07); }
+  .solution-card:hover { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(10,15,30,0.13); }
+  .offre-card { box-shadow: 0 2px 16px rgba(10,15,30,0.08); }
+  .offre-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(10,15,30,0.13); }
+  .offre-card.featured { box-shadow: 0 8px 32px rgba(55,138,221,0.22); }
+  .engagement-card { box-shadow: 0 2px 10px rgba(10,15,30,0.06); transition: box-shadow .2s, transform .2s; }
+  .engagement-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(10,15,30,0.12); }
+  nav { box-shadow: 0 2px 16px rgba(10,15,30,0.08); }
 
   /* NAV */
   nav {
     position: sticky; top: 0; z-index: 100;
-    background: var(--white);
-    border-bottom: 1px solid var(--gray-light);
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
     display: flex; align-items: center; justify-content: space-between;
     padding: 0 5%; height: 68px;
   }
@@ -98,34 +124,44 @@
 
   /* HERO */
   .hero {
-    background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
-    padding: 100px 5% 80px;
+    background: linear-gradient(160deg, #F5F5F3 0%, #EEECEA 60%, #E8E6E0 100%);
+    padding: 90px 5% 80px;
     display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; top: -20%; right: -5%; width: 55%; height: 140%;
+    background: radial-gradient(ellipse at center, rgba(200,200,195,0.4) 0%, transparent 70%);
+    pointer-events: none;
   }
   .hero-tag {
-    display: inline-block; background: rgba(255,255,255,0.12); color: var(--blue-light);
-    font-size: 12px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase;
+    display: inline-block; background: rgba(10,15,30,0.06); color: var(--navy);
+    font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
     padding: 5px 14px; border-radius: 20px; margin-bottom: 1.5rem;
+    border: 1px solid rgba(10,15,30,0.12);
   }
   .hero h1 {
-    font-family: 'Sora', sans-serif; font-size: 46px; font-weight: 600;
-    color: var(--white); line-height: 1.15; margin-bottom: 1.25rem;
+    font-family: 'Plus Jakarta Sans','Sora', sans-serif; font-size: 52px; font-weight: 300;
+    color: var(--navy); line-height: 1.1; margin-bottom: 1.25rem;
+    letter-spacing: -1px;
   }
+  .hero h1 strong { font-weight: 700; }
   .hero h1 span { color: var(--blue-light); }
-  .hero-sub { font-size: 17px; color: var(--blue-light); line-height: 1.7; margin-bottom: 2rem; }
+  .hero-sub { font-size: 17px; color: var(--gray-mid); line-height: 1.7; margin-bottom: 2rem; }
   .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
   .btn-primary {
-    background: var(--white); color: var(--navy); font-weight: 600; font-size: 15px;
+    background: var(--navy); color: var(--white); font-weight: 600; font-size: 15px;
     padding: 13px 28px; border-radius: var(--radius-sm); border: none; cursor: pointer;
-    text-decoration: none; transition: opacity .2s;
+    text-decoration: none; transition: all .2s; box-shadow: 0 4px 16px rgba(10,15,30,0.2);
   }
-  .btn-primary:hover { opacity: .9; }
+  .btn-primary:hover { background: var(--blue); box-shadow: 0 6px 20px rgba(26,111,212,0.3); }
   .btn-outline {
-    background: transparent; color: var(--white); font-weight: 500; font-size: 15px;
-    padding: 13px 28px; border-radius: var(--radius-sm); border: 1.5px solid rgba(255,255,255,.4);
-    cursor: pointer; text-decoration: none; transition: border-color .2s;
+    background: transparent; color: var(--navy); font-weight: 600; font-size: 15px;
+    padding: 13px 28px; border-radius: var(--radius-sm); border: 1.5px solid rgba(10,15,30,0.25);
+    cursor: pointer; text-decoration: none; transition: all .2s;
   }
-  .btn-outline:hover { border-color: rgba(255,255,255,.8); }
+  .btn-outline:hover { border-color: var(--navy); background: rgba(10,15,30,0.04); }
   .hero-visual {
     background: rgba(255,255,255,0.07); border-radius: var(--radius);
     border: 1px solid rgba(255,255,255,.12); padding: 2rem;
@@ -147,13 +183,13 @@
     font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
     color: var(--blue-mid); margin-bottom: .6rem;
   }
-  .section-title { font-family: 'Sora', sans-serif; font-size: 32px; font-weight: 600; color: var(--navy); margin-bottom: 1rem; }
-  .section-sub { font-size: 16px; color: var(--gray-mid); max-width: 600px; line-height: 1.7; }
+  .section-title { font-family: 'Plus Jakarta Sans','Sora', sans-serif; font-size: 36px; font-weight: 700; color: var(--navy); margin-bottom: 1rem; letter-spacing: -.5px; }
+  .section-sub { font-size: 17px; color: var(--gray-mid); max-width: 620px; line-height: 1.75; }
   .section-center { text-align: center; }
   .section-center .section-sub { margin: 0 auto; }
 
   /* SOLUTIONS GRID */
-  .solutions { background: var(--gray-pale); }
+  .solutions { background: #F2F0E9; }
   .solutions-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 3rem; }
   .solution-card {
     background: var(--white); border-radius: var(--radius); padding: 1.75rem 1.5rem;
@@ -184,6 +220,7 @@
   .offre-card.featured {
     border: 2px solid var(--blue-mid);
     position: relative;
+    background: linear-gradient(160deg, #F8FAFF 0%, #FFFFFF 100%);
   }
   .offre-popular {
     position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
@@ -202,15 +239,15 @@
   .offre-features li.no::before { content: '✕'; color: var(--gray-light); }
   .offre-features li.no { color: var(--gray-mid); }
   .offre-btn {
-    margin-top: auto; padding: 12px; border-radius: var(--radius-sm);
-    font-size: 14px; font-weight: 600; cursor: pointer; text-align: center;
-    text-decoration: none; border: 1.5px solid var(--gray-light);
-    color: var(--navy); background: transparent; transition: all .2s;
-    display: block;
+    margin-top: auto; padding: 12px; border-radius: 50px;
+    font-size: 14px; font-weight: 700; cursor: pointer; text-align: center;
+    text-decoration: none; border: 2px solid var(--navy);
+    color: var(--navy); background: transparent; transition: all .25s cubic-bezier(.4,0,.2,1);
+    display: block; letter-spacing: .02em;
   }
-  .offre-btn:hover { background: var(--blue-pale); border-color: var(--blue-mid); }
-  .offre-btn.primary { background: var(--navy); color: var(--white); border-color: var(--navy); }
-  .offre-btn.primary:hover { background: var(--blue); border-color: var(--blue); }
+  .offre-btn:hover { background: var(--navy); color: white; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(10,15,30,0.2); }
+  .offre-btn.primary { background: var(--navy); color: var(--white); border-color: var(--navy); box-shadow: 0 4px 16px rgba(10,15,30,0.2); }
+  .offre-btn.primary:hover { background: var(--blue); border-color: var(--blue); box-shadow: 0 8px 24px rgba(26,111,212,0.35); transform: translateY(-2px); }
 
   /* ENGAGEMENTS */
   .engagements { background: var(--gray-pale); }
@@ -332,59 +369,237 @@
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div style="display:flex;align-items:center;gap:.5rem;">
-    <a href="https://www.linkedin.com/in/netrelais-it-68785a40b/" target="_blank" rel="noopener" title="LinkedIn NetRelais" style="display:flex;align-items:center;color:#9E9E9E;transition:color .2s;" onmouseover="this.style.color='#0A66C2'" onmouseout="this.style.color='#9E9E9E'">
+    <a href="https://www.linkedin.com/in/netrelais-it-68785a40b/" target="_blank" rel="noopener noreferrer" title="LinkedIn NetRelais" style="display:flex;align-items:center;color:#9E9E9E;transition:color .2s;" onmouseover="this.style.color='#0A66C2'" onmouseout="this.style.color='#9E9E9E'">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
     </a>
     <a class="nav-phone" href="tel:+33610796440" style="text-decoration:none;color:var(--blue);font-weight:500;font-size:13px;">📞 06 10 79 64 40</a>
     <a class="nav-cta" href="#contact">Demander un devis</a>
   </div>
 </nav>
-<div style="background:#FF5C00;padding:8px 5%;display:flex;align-items:center;justify-content:center;gap:2rem;flex-wrap:wrap;">
-  <span style="font-size:12px;font-weight:600;color:white;letter-spacing:1px;">⚡ RÉPONSE GARANTIE SOUS 4H</span>
-  <span style="font-size:12px;color:rgba(255,255,255,0.7);">·</span>
-  <span style="font-size:12px;color:rgba(255,255,255,0.85);">Sans engagement · Audit gratuit</span>
-  <span style="font-size:12px;color:rgba(255,255,255,0.7);">·</span>
-  <a href="tel:+33610796440" style="font-size:12px;font-weight:600;color:white;text-decoration:none;background:rgba(255,255,255,0.15);padding:4px 14px;border-radius:20px;">📞 06 10 79 64 40</a>
+<div style="background:#FF5C00;padding:9px 5%;display:flex;align-items:center;justify-content:center;gap:2rem;flex-wrap:wrap;">
+
+  <!-- Élément 1 : Réactivité — très mis en avant -->
+  <span style="display:flex;align-items:center;gap:8px;">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+    <span style="font-size:13px;font-weight:800;color:white;letter-spacing:.5px;text-transform:uppercase;">Réponse sous <span style="font-size:16px;border-bottom:2px solid white;padding-bottom:1px;">4h</span></span>
+  </span>
+
+  <span style="color:rgba(255,255,255,0.4);font-size:16px;">|</span>
+
+  <!-- Élément 2 : Sans engagement -->
+  <span style="display:flex;align-items:center;gap:6px;">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+    <span style="font-size:12px;color:white;font-weight:700;">Sans engagement</span>
+  </span>
+
+  <span style="color:rgba(255,255,255,0.4);font-size:16px;">|</span>
+
+  <!-- Élément 3 : Audit gratuit — badge distinct -->
+  <span style="display:flex;align-items:center;gap:6px;">
+    <span style="background:white;color:#FF5C00;font-size:11px;font-weight:800;padding:3px 10px;border-radius:20px;letter-spacing:.3px;">GRATUIT</span>
+    <span style="font-size:12px;color:white;font-weight:600;">Audit de votre infrastructure</span>
+  </span>
+
+  <span style="color:rgba(255,255,255,0.4);font-size:16px;">|</span>
+
+  <!-- Élément 4 : Téléphone — bouton clair -->
+  <a href="tel:+33610796440" style="display:flex;align-items:center;gap:7px;background:white;color:#FF5C00;text-decoration:none;padding:6px 16px;border-radius:20px;font-size:13px;font-weight:800;transition:opacity .2s;letter-spacing:.3px;">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF5C00" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6"/></svg>
+    06 10 79 64 40
+  </a>
+
 </div>
 
 <!-- HERO -->
 <section class="hero">
   <div>
     <div class="hero-tag">Nouvelle-Aquitaine · TPE &amp; PME</div>
-    <h1>Connecté à <span>votre entreprise</span></h1>
-    <p class="hero-sub">Conseils, services, solutions — Nous prenons en charge la gestion complète de vos besoins numériques. Réactif, local et sans engagement.</p>
+    <h1>L'expertise IT pour<br>des infrastructures <strong>sereine<span style="color:#FF5C00;">s</span></strong></h1>
+    <p class="hero-sub">Infogérance · Support · Cloud — Nous prenons en charge la gestion complète de votre système d'information. Réactif, local, sans engagement.</p>
     <div class="hero-btns">
       <a class="btn-primary" href="#offres">Voir les offres</a>
       <a class="btn-outline" href="#contact">Audit gratuit</a>
       <a class="btn-outline" href="tel:+33610796440" style="display:flex;align-items:center;gap:6px;">📞 Appel direct</a>
     </div>
-  </div>
-  <div class="hero-visual">
-    <div class="hero-stat">
-      <div class="hero-stat-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
-      <div>
-        <div class="hero-stat-val">Réactivité garantie</div>
-        <div class="hero-stat-label">Assistance sous 4h à 24h selon l'offre</div>
+    <div style="display:flex;gap:1.5rem;margin-top:2.5rem;flex-wrap:wrap;align-items:center;">
+      <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--gray-mid);">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF5C00" stroke-width="2"><path d="M22 12H2M5.5 5.5C4.5 7 4 8.9 4 12s.5 5 1.5 6.5M18.5 5.5C19.5 7 20 8.9 20 12s-.5 5-1.5 6.5M12 2a10 10 0 0 1 0 20A10 10 0 0 1 12 2z"/></svg>
+        <span style="font-weight:700;color:var(--navy);letter-spacing:.05em;">CLOUD</span>
       </div>
-    </div>
-    <div class="hero-divider"></div>
-    <div class="hero-stat">
-      <div class="hero-stat-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-      <div>
-        <div class="hero-stat-val">Infrastructure sécurisée</div>
-        <div class="hero-stat-label">Supervision, sauvegardes, firewall</div>
+      <span style="color:var(--gray-light);">|</span>
+      <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--gray-mid);">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF5C00" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12"/><path d="M22 8a10 10 0 0 0-10-6 10 10 0 0 0-9.9 8.6"/><polyline points="2 2 6 6 2 10"/></svg>
+        <span style="font-weight:700;color:var(--navy);letter-spacing:.05em;">SUPPORT</span>
       </div>
-    </div>
-    <div class="hero-divider"></div>
-    <div class="hero-stat">
-      <div class="hero-stat-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-      <div>
-        <div class="hero-stat-val">Interlocuteur unique</div>
-        <div class="hero-stat-label">Un technicien dédié, ancré localement</div>
+      <span style="color:var(--gray-light);">|</span>
+      <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--gray-mid);">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF5C00" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span style="font-weight:700;color:var(--navy);letter-spacing:.05em;">SÉCURITÉ</span>
       </div>
     </div>
   </div>
-</section>
+  <!-- Dashboard IT animé — style Vercel/Linear -->
+  <div style="position:relative;display:flex;align-items:center;justify-content:center;height:440px;">
+
+    <style>
+      @keyframes float-dash { 0%,100%{transform:translateY(0) rotate(-1.5deg)} 50%{transform:translateY(-10px) rotate(-1.5deg)} }
+      @keyframes float-notif { 0%,100%{transform:translateY(0) rotate(2deg)} 50%{transform:translateY(-7px) rotate(2deg)} }
+      @keyframes blink-green { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(0.85)} }
+      @keyframes scan-line { 0%{transform:translateY(0)} 100%{transform:translateY(48px)} }
+      @keyframes bar-grow { from{height:4px;opacity:.3} to{opacity:1} }
+      @keyframes slide-in-notif { from{opacity:0;transform:translateX(20px) rotate(2deg)} to{opacity:1;transform:translateX(0) rotate(2deg)} }
+      .blink { animation: blink-green 2s ease-in-out infinite; }
+      .blink2 { animation: blink-green 2s ease-in-out infinite .5s; }
+      .blink3 { animation: blink-green 2s ease-in-out infinite 1s; }
+    </style>
+
+    <!-- ─── Carte principale : Dashboard supervision ─── -->
+    <div style="
+      position:absolute;left:50%;top:50%;
+      transform:translate(-62%,-50%) rotate(-1.5deg);
+      width:310px;
+      background:white;border-radius:18px;
+      box-shadow:0 24px 64px rgba(10,15,30,0.13),0 2px 8px rgba(10,15,30,0.06);
+      overflow:hidden;
+      animation:float-dash 7s ease-in-out infinite;
+      z-index:2;
+    ">
+      <!-- Titlebar style macOS -->
+      <div style="background:#0A0F1E;padding:12px 16px;display:flex;align-items:center;gap:6px;">
+        <div style="width:10px;height:10px;border-radius:50%;background:#FF5755;"></div>
+        <div style="width:10px;height:10px;border-radius:50%;background:#FEBC2E;"></div>
+        <div style="width:10px;height:10px;border-radius:50%;background:#27C840;"></div>
+        <span style="font-family:monospace;font-size:10px;color:#4A6A9A;margin-left:8px;letter-spacing:.5px;">supervision.netrelais.fr</span>
+        <div style="margin-left:auto;width:6px;height:6px;border-radius:50%;background:#FF5C00;animation:blink-green 1.5s ease-in-out infinite;"></div>
+      </div>
+
+      <div style="padding:16px;">
+        <!-- Titre section -->
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+          <span style="font-size:11px;font-weight:700;color:#AAAAAA;letter-spacing:1px;text-transform:uppercase;">Infrastructure · En direct</span>
+          <span style="font-size:10px;color:#1D9E75;font-weight:600;background:#EAF3DE;padding:2px 8px;border-radius:10px;">● Opérationnel</span>
+        </div>
+
+        <!-- Lignes de services -->
+        <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:14px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 10px;background:#F8F9FC;border-radius:9px;">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div class="blink" style="width:7px;height:7px;border-radius:50%;background:#1D9E75;flex-shrink:0;"></div>
+              <span style="font-size:12px;color:#2C2C2A;font-weight:500;">Serveur fichiers</span>
+            </div>
+            <span style="font-size:11px;font-weight:600;color:#1D9E75;">En ligne</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 10px;background:#F8F9FC;border-radius:9px;">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div class="blink2" style="width:7px;height:7px;border-radius:50%;background:#1D9E75;flex-shrink:0;"></div>
+              <span style="font-size:12px;color:#2C2C2A;font-weight:500;">Sauvegarde cloud</span>
+            </div>
+            <span style="font-size:11px;font-weight:600;color:#1D9E75;">Synchronisé</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 10px;background:#F8F9FC;border-radius:9px;">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div class="blink3" style="width:7px;height:7px;border-radius:50%;background:#1D9E75;flex-shrink:0;"></div>
+              <span style="font-size:12px;color:#2C2C2A;font-weight:500;">Firewall &amp; VPN</span>
+            </div>
+            <span style="font-size:11px;font-weight:600;color:#1D9E75;">Actif</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 10px;background:#FFF8F4;border-radius:9px;border:1px solid #FFE4D0;">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div style="width:7px;height:7px;border-radius:50%;background:#F59E0B;flex-shrink:0;animation:blink-green 1.2s ease-in-out infinite;"></div>
+              <span style="font-size:12px;color:#2C2C2A;font-weight:500;">Poste PC-03</span>
+            </div>
+            <span style="font-size:11px;font-weight:600;color:#F59E0B;">MAJ requise</span>
+          </div>
+        </div>
+
+        <!-- Uptime bars -->
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:7px;">
+          <span style="font-size:10px;font-weight:700;color:#AAAAAA;letter-spacing:.8px;text-transform:uppercase;">Disponibilité 30j</span>
+          <span style="font-size:13px;font-weight:800;color:#0A0F1E;">99.8%</span>
+        </div>
+        <div style="display:flex;gap:2px;align-items:flex-end;height:32px;" id="uptime-bars">
+          <!-- Barres générées par JS -->
+        </div>
+        <div style="display:flex;justify-content:space-between;margin-top:4px;">
+          <span style="font-size:10px;color:#CCCCCC;">il y a 30j</span>
+          <span style="font-size:10px;color:#CCCCCC;">Aujourd'hui</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── Carte flottante : Ticket résolu ─── -->
+    <div style="
+      position:absolute;right:2%;top:14%;
+      width:185px;
+      background:white;border-radius:14px;
+      box-shadow:0 12px 36px rgba(10,15,30,0.12);
+      padding:14px;
+      animation:float-notif 5.5s ease-in-out infinite;
+      animation:float-notif 5.5s ease-in-out infinite, slide-in-notif .6s ease .3s both;
+      z-index:3;
+      transform:rotate(2deg);
+    ">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+        <div style="width:30px;height:30px;border-radius:8px;background:#EAF3DE;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1D9E75" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div>
+          <div style="font-size:11px;font-weight:700;color:#0A0F1E;">Ticket résolu</div>
+          <div style="font-size:10px;color:#AAAAAA;">il y a 12 min</div>
+        </div>
+      </div>
+      <div style="font-size:11px;color:#5F5E5A;line-height:1.5;">Imprimante réseau rétablie — bureau 2</div>
+    </div>
+
+    <!-- ─── Carte flottante : Réponse rapide ─── -->
+    <div style="
+      position:absolute;right:0%;bottom:18%;
+      width:170px;
+      background:#0A0F1E;border-radius:14px;
+      box-shadow:0 12px 32px rgba(10,15,30,0.2);
+      padding:14px;
+      animation:float-notif 6.5s ease-in-out infinite .8s;
+      z-index:3;
+      transform:rotate(1.5deg);
+    ">
+      <div style="font-size:10px;color:#4A6A9A;font-weight:600;letter-spacing:.5px;text-transform:uppercase;margin-bottom:8px;">Temps de réponse</div>
+      <div style="font-size:28px;font-weight:800;color:white;line-height:1;">
+        &lt; 4h
+      </div>
+      <div style="font-size:11px;color:#1D9E75;margin-top:4px;font-weight:500;">Garanti sur contrat</div>
+      <div style="height:1px;background:rgba(255,255,255,.08);margin:10px 0;"></div>
+      <div style="display:flex;align-items:center;gap:6px;">
+        <div style="width:6px;height:6px;border-radius:50%;background:#FF5C00;animation:blink-green 1.5s infinite;"></div>
+        <span style="font-size:10px;color:#4A6A9A;">Support actif maintenant</span>
+      </div>
+    </div>
+
+    <!-- Script : génération barres uptime -->
+    <script>
+    (function() {
+      var container = document.getElementById('uptime-bars');
+      if (!container) return;
+      var bars = 45;
+      for (var i = 0; i < bars; i++) {
+        var bar = document.createElement('div');
+        var isDown = (i === 12 || i === 28); // 2 micro-incidents simulés
+        var h = isDown ? 10 + Math.random()*8 : 20 + Math.random()*12;
+        bar.style.cssText = [
+          'flex:1', 'border-radius:3px',
+          'background:' + (isDown ? '#F59E0B' : '#1D9E75'),
+          'height:' + h + 'px',
+          'opacity:' + (isDown ? '0.7' : (0.5 + i/bars*0.5)),
+          'transition:height .3s',
+          'animation:bar-grow ' + (0.3 + i*0.02) + 's ease both',
+          'cursor:default',
+        ].join(';');
+        bar.title = isDown ? 'Incident mineur — résolu en 18min' : '100% disponible';
+        container.appendChild(bar);
+      }
+    })();
+    </script>
+
+  </div></section>
 
 <!-- SOLUTIONS -->
 <section class="solutions" id="solutions">
@@ -395,52 +610,28 @@
   </div>
   <div class="solutions-grid">
     <div class="solution-card">
-      <div class="solution-card-icon">
-        <svg viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="currentColor" stroke="none"/></svg>
-      </div>
+      <div class="solution-card-icon"><svg viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="currentColor" stroke="none"/></svg></div>
       <h3>Réseaux</h3>
       <p>Conception et administration de votre infrastructure réseau locale et distante.</p>
-      <div class="solution-tags">
-        <span class="solution-tag">Accès Internet · Wi-Fi</span>
-        <span class="solution-tag">VPN · Failover</span>
-        <span class="solution-tag">Câblage · Switching</span>
-      </div>
+      <div class="solution-tags"><span class="solution-tag">Accès Internet · Wi-Fi</span><span class="solution-tag">VPN · Failover</span><span class="solution-tag">Câblage · Switching</span></div>
     </div>
     <div class="solution-card">
-      <div class="solution-card-icon">
-        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      </div>
+      <div class="solution-card-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
       <h3>Protection</h3>
       <p>Sécurisez votre système d'information contre les menaces internes et externes.</p>
-      <div class="solution-tags">
-        <span class="solution-tag">Cybersécurité · Firewall</span>
-        <span class="solution-tag">Antivirus · Sauvegardes</span>
-        <span class="solution-tag">Vidéosurveillance</span>
-      </div>
+      <div class="solution-tags"><span class="solution-tag">Cybersécurité · Firewall</span><span class="solution-tag">Antivirus · Sauvegardes</span><span class="solution-tag">Vidéosurveillance</span></div>
     </div>
     <div class="solution-card">
-      <div class="solution-card-icon">
-        <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M7 8h10M7 12h6"/></svg>
-      </div>
+      <div class="solution-card-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M7 8h10M7 12h6"/></svg></div>
       <h3>Infogérance</h3>
       <p>Externalisation complète ou partielle de votre gestion informatique.</p>
-      <div class="solution-tags">
-        <span class="solution-tag">Maintenance · Audit</span>
-        <span class="solution-tag">Gestion de parc</span>
-        <span class="solution-tag">DSI externalisé</span>
-      </div>
+      <div class="solution-tags"><span class="solution-tag">Maintenance · Audit</span><span class="solution-tag">Gestion de parc</span><span class="solution-tag">DSI externalisé</span></div>
     </div>
     <div class="solution-card">
-      <div class="solution-card-icon">
-        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 17"/></svg>
-      </div>
+      <div class="solution-card-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 17"/></svg></div>
       <h3>Collaboration</h3>
       <p>Outils et licences pour travailler mieux, ensemble, où que vous soyez.</p>
-      <div class="solution-tags">
-        <span class="solution-tag">Téléphonie · Mobile</span>
-        <span class="solution-tag">Visioconférence</span>
-        <span class="solution-tag">Microsoft 365 · Google</span>
-      </div>
+      <div class="solution-tags"><span class="solution-tag">Téléphonie · Mobile</span><span class="solution-tag">Visioconférence</span><span class="solution-tag">Microsoft 365 · Google</span></div>
     </div>
   </div>
 </section>
@@ -449,7 +640,7 @@
 <section class="offres" id="offres">
   <div class="offres-intro">
     <div class="section-label">Nos offres sans engagement</div>
-    <div class="section-title">Un support adapté à votre réactivité</div>
+    <div class="section-title">Un support et un service informatique réactifs et adaptés à vos besoins</div>
     <p class="section-sub">Parce que chaque entreprise a des exigences différentes, NetRelais vous propose une offre flexible avec trois formules adaptées à vos besoins.</p>
     <div class="sans-engagement">
       <span class="se-item">Tarifs transparents</span>
@@ -458,14 +649,13 @@
     </div>
   </div>
 
-  <!-- CARTES OFFRES -->
   <div class="offres-grid">
     <div class="offre-card">
-      <div class="offre-emoji">🛵</div>
+      <div class="offre-emoji"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
       <div class="offre-name">Net'Start</div>
       <div class="offre-reaction">Assistance sous 24h ouvrées</div>
-      <div class="offre-price">13<span style="font-size:22px;">,90</span> <span>€ HT / poste / mois</span></div>
-      <div style="font-size:12px;color:var(--gray-mid);margin-top:-6px;">soit ~278€/mois pour 20 postes</div>
+      <div class="offre-price">17 <span>€ HT / poste / mois</span></div>
+      <div style="font-size:12px;color:var(--gray-mid);margin-top:-6px;">soit ~340€/mois pour 20 postes</div>
       <div class="offre-desc">Une assistance fiable pour une continuité assurée. Idéal pour les très petites structures.</div>
       <ul class="offre-features">
         <li>Supervision réseau &amp; postes</li>
@@ -487,11 +677,11 @@
 
     <div class="offre-card featured">
       <div class="offre-popular">⚡ L'offre la plus populaire</div>
-      <div class="offre-emoji">🏎️</div>
+      <div class="offre-emoji"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--blue-mid)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
       <div class="offre-name">Net'Boost</div>
       <div class="offre-reaction">Assistance sous 12h ouvrées</div>
-      <div class="offre-price">20<span style="font-size:22px;">,90</span> <span>€ HT / poste / mois</span></div>
-      <div style="font-size:12px;color:var(--gray-mid);margin-top:-6px;">soit ~418€/mois pour 20 postes</div>
+      <div class="offre-price">25 <span>€ HT / poste / mois</span></div>
+      <div style="font-size:12px;color:var(--gray-mid);margin-top:-6px;">soit ~500€/mois pour 20 postes</div>
       <div class="offre-desc">Une prise en charge accélérée pour plus de sérénité. Couverture complète pour 5 à 30 postes.</div>
       <ul class="offre-features">
         <li>Tout le pack Net'Start</li>
@@ -512,11 +702,11 @@
     </div>
 
     <div class="offre-card">
-      <div class="offre-emoji">🚀</div>
+      <div class="offre-emoji"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
       <div class="offre-name">Net'Max</div>
       <div class="offre-reaction">Assistance sous 4h ouvrées</div>
-      <div class="offre-price">27<span style="font-size:22px;">,90</span> <span>€ HT / poste / mois</span></div>
-      <div style="font-size:12px;color:var(--gray-mid);margin-top:-6px;">soit ~558€/mois pour 20 postes</div>
+      <div class="offre-price">35 <span>€ HT / poste / mois</span></div>
+      <div style="font-size:12px;color:var(--gray-mid);margin-top:-6px;">soit ~700€/mois pour 20 postes</div>
       <div class="offre-desc">Une réactivité immédiate pour une gestion sans attente. Pour les infras hybrides ou cloud.</div>
       <ul class="offre-features">
         <li>Tout le pack Net'Boost</li>
@@ -541,155 +731,58 @@
 
   <!-- TABLEAU COMPARATIF -->
   <div style="margin-top:3rem;">
-    <div style="font-family:Sora,sans-serif;font-size:20px;font-weight:600;color:var(--navy);text-align:center;margin-bottom:.5rem;">Comparatif détaillé</div>
+    <div style="font-family:'Plus Jakarta Sans','Sora',sans-serif;font-size:20px;font-weight:600;color:var(--navy);text-align:center;margin-bottom:.5rem;">Comparatif détaillé</div>
     <p style="text-align:center;font-size:14px;color:var(--gray-mid);margin-bottom:2rem;">Toutes les offres incluent un interlocuteur unique basé en Nouvelle-Aquitaine</p>
-    <div style="overflow-x:auto;border-radius:var(--radius);border:1px solid var(--gray-light);">
+    <div style="overflow-x:auto;border-radius:var(--radius);border:1px solid var(--gray-light);box-shadow:0 4px 20px rgba(10,15,30,0.06);">
     <table style="width:100%;border-collapse:collapse;font-size:14px;min-width:580px;">
       <thead>
         <tr>
           <th style="text-align:left;padding:16px 20px;background:#F8F9FC;color:var(--gray-mid);font-weight:500;font-size:12px;letter-spacing:.05em;text-transform:uppercase;border-bottom:1px solid var(--gray-light);width:42%;"></th>
           <th style="text-align:center;padding:16px 12px;background:#F8F9FC;border-bottom:1px solid var(--gray-light);">
-            <div style="font-size:18px;margin-bottom:4px;">🛵</div>
-            <div style="font-weight:600;color:var(--navy);font-size:14px;">Net'Start</div>
-            <div style="font-size:12px;color:var(--gray-mid);margin-top:2px;">13,90 €<span style="font-size:10px;">/poste</span></div>
+            <div style="width:40px;height:40px;background:#EBF2FF;border-radius:10px;display:flex;align-items:center;justify-content:center;margin:0 auto 8px;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1A6FD4" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            </div>
+            <div style="font-weight:700;color:var(--navy);font-size:14px;">Net'Start</div>
+            <div style="font-size:13px;color:var(--blue);font-weight:600;margin-top:4px;">17 €<span style="font-size:11px;font-weight:400;color:var(--gray-mid);">/poste</span></div>
           </th>
           <th style="text-align:center;padding:16px 12px;background:#EBF4FF;border-bottom:2px solid var(--blue-mid);">
-            <div style="font-size:18px;margin-bottom:4px;">🏎️</div>
-            <div style="font-weight:600;color:var(--navy);font-size:14px;">Net'Boost</div>
-            <div style="font-size:12px;color:var(--blue);margin-top:2px;">20,90 €<span style="font-size:10px;">/poste</span></div>
-            <div style="font-size:10px;background:var(--blue-mid);color:white;border-radius:10px;padding:2px 8px;margin-top:4px;display:inline-block;">Populaire</div>
+            <div style="width:40px;height:40px;background:#1A6FD4;border-radius:10px;display:flex;align-items:center;justify-content:center;margin:0 auto 8px;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <div style="font-weight:700;color:var(--navy);font-size:14px;">Net'Boost</div>
+            <div style="font-size:13px;color:var(--blue);font-weight:600;margin-top:4px;">25 €<span style="font-size:11px;font-weight:400;color:var(--gray-mid);">/poste</span></div>
+            <div style="font-size:10px;background:var(--blue-mid);color:white;border-radius:10px;padding:3px 10px;margin-top:6px;display:inline-block;font-weight:600;letter-spacing:.5px;">⭐ POPULAIRE</div>
           </th>
           <th style="text-align:center;padding:16px 12px;background:#F8F9FC;border-bottom:1px solid var(--gray-light);">
-            <div style="font-size:18px;margin-bottom:4px;">🚀</div>
-            <div style="font-weight:600;color:var(--navy);font-size:14px;">Net'Max</div>
-            <div style="font-size:12px;color:var(--gray-mid);margin-top:2px;">27,90 €<span style="font-size:10px;">/poste</span></div>
+            <div style="width:40px;height:40px;background:#0A0F1E;border-radius:10px;display:flex;align-items:center;justify-content:center;margin:0 auto 8px;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+            </div>
+            <div style="font-weight:700;color:var(--navy);font-size:14px;">Net'Max</div>
+            <div style="font-size:13px;color:var(--navy);font-weight:600;margin-top:4px;">35 €<span style="font-size:11px;font-weight:400;color:var(--gray-mid);">/poste</span></div>
           </th>
         </tr>
       </thead>
       <tbody>
-
-        <!-- RÉACTIVITÉ -->
-        <tr style="background:#F0F4F8;">
-          <td colspan="4" style="padding:8px 20px;font-size:11px;font-weight:700;color:var(--gray-mid);letter-spacing:.1em;text-transform:uppercase;">Réactivité &amp; support</td>
-        </tr>
-        <tr style="background:white;">
-          <td style="padding:13px 20px;border-bottom:1px solid #F0F0F0;color:var(--gray-dark);">Temps de réponse garanti</td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;font-weight:600;color:var(--navy);">24h</td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;font-weight:600;color:var(--blue);">12h</td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;font-weight:600;color:var(--navy);">4h</td>
-        </tr>
-        <tr style="background:#FAFAFA;">
-          <td style="padding:13px 20px;border-bottom:1px solid #F0F0F0;">Support par email &amp; ticket</td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:16px;">✓</td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;color:#1D9E75;font-size:16px;">✓</td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:16px;">✓</td>
-        </tr>
-        <tr style="background:white;">
-          <td style="padding:13px 20px;border-bottom:1px solid #F0F0F0;">Support téléphonique dédié</td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#D0D0D0;font-size:16px;">—</td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;color:#1D9E75;font-size:16px;">✓</td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:16px;">✓</td>
-        </tr>
-
-        <!-- SUPERVISION -->
-        <tr style="background:#F0F4F8;">
-          <td colspan="4" style="padding:8px 20px;font-size:11px;font-weight:700;color:var(--gray-mid);letter-spacing:.1em;text-transform:uppercase;">Supervision &amp; maintenance</td>
-        </tr>
-        <tr style="background:white;">
-          <td style="padding:13px 20px;border-bottom:1px solid #F0F0F0;">Supervision réseau &amp; postes</td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:16px;">✓</td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;color:#1D9E75;font-size:16px;">✓</td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:16px;">✓</td>
-        </tr>
-        <tr style="background:#FAFAFA;">
-          <td style="padding:13px 20px;border-bottom:1px solid #F0F0F0;">Mises à jour &amp; correctifs sécurité</td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:16px;">✓</td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;color:#1D9E75;font-size:16px;">✓</td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:16px;">✓</td>
-        </tr>
-        <tr style="background:white;">
-          <td style="padding:13px 20px;border-bottom:1px solid #F0F0F0;">Prise en main à distance illimitée</td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:16px;">✓</td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;color:#1D9E75;font-size:16px;">✓</td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:16px;">✓</td>
-        </tr>
-        <tr style="background:#FAFAFA;">
-          <td style="padding:13px 20px;border-bottom:1px solid #F0F0F0;">Rapport mensuel infrastructure</td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:16px;">✓</td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;color:#1D9E75;font-size:16px;">✓</td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:16px;">✓</td>
-        </tr>
-
-        <!-- GESTION UTILISATEURS -->
-        <tr style="background:#F0F4F8;">
-          <td colspan="4" style="padding:8px 20px;font-size:11px;font-weight:700;color:var(--gray-mid);letter-spacing:.1em;text-transform:uppercase;">Gestion utilisateurs &amp; sécurité</td>
-        </tr>
-        <tr style="background:white;">
-          <td style="padding:13px 20px;border-bottom:1px solid #F0F0F0;">Onboarding / Offboarding collaborateurs</td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#D0D0D0;font-size:16px;">—</td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;color:#1D9E75;font-size:16px;">✓</td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:16px;">✓</td>
-        </tr>
-        <tr style="background:#FAFAFA;">
-          <td style="padding:13px 20px;border-bottom:1px solid #F0F0F0;">Gestion sécurité du parc <span style="font-size:12px;color:var(--gray-mid);">(antivirus, MdP, MAJ)</span></td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#D0D0D0;font-size:16px;">—</td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;color:#1D9E75;font-size:16px;">✓</td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:16px;">✓</td>
-        </tr>
-        <tr style="background:white;">
-          <td style="padding:13px 20px;border-bottom:1px solid #F0F0F0;">Administration Office 365 &amp; Google Workspace</td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#D0D0D0;font-size:16px;">—</td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;color:#1D9E75;font-size:16px;">✓</td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:16px;">✓</td>
-        </tr>
-        <tr style="background:#FAFAFA;">
-          <td style="padding:13px 20px;border-bottom:1px solid #F0F0F0;">Gestion des garanties <span style="font-size:12px;color:var(--gray-mid);">(copieurs, ordis…)</span></td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#D0D0D0;font-size:16px;">—</td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;color:#1D9E75;font-size:16px;">✓</td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:16px;">✓</td>
-        </tr>
-
-        <!-- TERRAIN -->
-        <tr style="background:#F0F4F8;">
-          <td colspan="4" style="padding:8px 20px;font-size:11px;font-weight:700;color:var(--gray-mid);letter-spacing:.1em;text-transform:uppercase;">Interventions &amp; infrastructure</td>
-        </tr>
-        <tr style="background:white;">
-          <td style="padding:13px 20px;border-bottom:1px solid #F0F0F0;">Intervention sur site illimitée</td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#D0D0D0;font-size:16px;">—</td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;color:#D0D0D0;font-size:16px;">—</td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:16px;">✓</td>
-        </tr>
-        <tr style="background:#FAFAFA;">
-          <td style="padding:13px 20px;border-bottom:1px solid #F0F0F0;">Visite sur site mensuelle</td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#D0D0D0;font-size:16px;">—</td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;color:#D0D0D0;font-size:16px;">—</td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:16px;">✓</td>
-        </tr>
-        <tr style="background:white;">
-          <td style="padding:13px 20px;border-bottom:1px solid #F0F0F0;">Gestion réseau local <span style="font-size:12px;color:var(--gray-mid);">(câblage, Wi-Fi, VPN)</span></td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#D0D0D0;font-size:16px;">—</td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;color:#D0D0D0;font-size:16px;">—</td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:16px;">✓</td>
-        </tr>
-        <tr style="background:#FAFAFA;">
-          <td style="padding:13px 20px;border-bottom:1px solid #F0F0F0;">Gestion cloud <span style="font-size:12px;color:var(--gray-mid);">(Azure / AWS)</span></td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#D0D0D0;font-size:16px;">—</td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;color:#D0D0D0;font-size:16px;">—</td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:16px;">✓</td>
-        </tr>
-        <tr style="background:white;">
-          <td style="padding:13px 20px;border-bottom:1px solid #F0F0F0;">Gestion serveurs &amp; sauvegardes</td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#D0D0D0;font-size:16px;">—</td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;color:#D0D0D0;font-size:16px;">—</td>
-          <td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:16px;">✓</td>
-        </tr>
-        <tr style="background:#FAFAFA;">
-          <td style="padding:13px 20px;">Audit sécurité semestriel</td>
-          <td style="text-align:center;padding:13px 12px;color:#D0D0D0;font-size:16px;">—</td>
-          <td style="text-align:center;padding:13px 12px;background:#F5FAFF;color:#D0D0D0;font-size:16px;">—</td>
-          <td style="text-align:center;padding:13px 12px;color:#1D9E75;font-size:16px;">✓</td>
-        </tr>
-
+        <tr style="background:#F0F4F8;"><td colspan="4" style="padding:10px 20px;font-size:11px;font-weight:700;color:var(--blue);letter-spacing:.1em;text-transform:uppercase;background:#EBF4FF;">Réactivité &amp; support</td></tr>
+        <tr style="background:white;"><td style="padding:14px 20px;border-bottom:1px solid #F0F0F0;font-size:14px;vertical-align:middle;">Temps de réponse garanti</td><td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;font-weight:600;color:var(--navy);">24h</td><td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;font-weight:600;color:var(--blue);">12h</td><td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;font-weight:600;color:var(--navy);">4h</td></tr>
+        <tr style="background:#FAFAFA;"><td style="padding:14px 20px;border-bottom:1px solid #F0F0F0;font-size:14px;vertical-align:middle;">Support par email &amp; ticket</td><td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:18px;font-weight:700;">✓</td><td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;color:#1D9E75;font-size:18px;font-weight:700;">✓</td><td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:18px;font-weight:700;">✓</td></tr>
+        <tr style="background:white;"><td style="padding:14px 20px;border-bottom:1px solid #F0F0F0;font-size:14px;vertical-align:middle;">Support téléphonique dédié</td><td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#D8D6D0;font-size:18px;">—</td><td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;color:#1D9E75;font-size:18px;font-weight:700;">✓</td><td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:18px;font-weight:700;">✓</td></tr>
+        <tr style="background:#F0F4F8;"><td colspan="4" style="padding:10px 20px;font-size:11px;font-weight:700;color:var(--blue);letter-spacing:.1em;text-transform:uppercase;background:#EBF4FF;">Supervision &amp; maintenance</td></tr>
+        <tr style="background:white;"><td style="padding:14px 20px;border-bottom:1px solid #F0F0F0;font-size:14px;vertical-align:middle;">Supervision réseau &amp; postes</td><td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:18px;font-weight:700;">✓</td><td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;color:#1D9E75;font-size:18px;font-weight:700;">✓</td><td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:18px;font-weight:700;">✓</td></tr>
+        <tr style="background:#FAFAFA;"><td style="padding:14px 20px;border-bottom:1px solid #F0F0F0;font-size:14px;vertical-align:middle;">Mises à jour &amp; correctifs sécurité</td><td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:18px;font-weight:700;">✓</td><td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;color:#1D9E75;font-size:18px;font-weight:700;">✓</td><td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:18px;font-weight:700;">✓</td></tr>
+        <tr style="background:white;"><td style="padding:14px 20px;border-bottom:1px solid #F0F0F0;font-size:14px;vertical-align:middle;">Prise en main à distance illimitée</td><td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:18px;font-weight:700;">✓</td><td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;color:#1D9E75;font-size:18px;font-weight:700;">✓</td><td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:18px;font-weight:700;">✓</td></tr>
+        <tr style="background:#FAFAFA;"><td style="padding:14px 20px;border-bottom:1px solid #F0F0F0;font-size:14px;vertical-align:middle;">Rapport mensuel infrastructure</td><td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:18px;font-weight:700;">✓</td><td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;color:#1D9E75;font-size:18px;font-weight:700;">✓</td><td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:18px;font-weight:700;">✓</td></tr>
+        <tr style="background:#F0F4F8;"><td colspan="4" style="padding:10px 20px;font-size:11px;font-weight:700;color:var(--blue);letter-spacing:.1em;text-transform:uppercase;background:#EBF4FF;">Gestion utilisateurs &amp; sécurité</td></tr>
+        <tr style="background:white;"><td style="padding:14px 20px;border-bottom:1px solid #F0F0F0;font-size:14px;vertical-align:middle;">Onboarding / Offboarding collaborateurs</td><td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#D8D6D0;font-size:18px;">—</td><td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;color:#1D9E75;font-size:18px;font-weight:700;">✓</td><td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:18px;font-weight:700;">✓</td></tr>
+        <tr style="background:#FAFAFA;"><td style="padding:14px 20px;border-bottom:1px solid #F0F0F0;font-size:14px;vertical-align:middle;">Gestion sécurité du parc <span style="font-size:12px;color:var(--gray-mid);">(antivirus, MdP, MAJ)</span></td><td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#D8D6D0;font-size:18px;">—</td><td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;color:#1D9E75;font-size:18px;font-weight:700;">✓</td><td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:18px;font-weight:700;">✓</td></tr>
+        <tr style="background:white;"><td style="padding:14px 20px;border-bottom:1px solid #F0F0F0;font-size:14px;vertical-align:middle;">Administration Office 365 &amp; Google Workspace</td><td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#D8D6D0;font-size:18px;">—</td><td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;color:#1D9E75;font-size:18px;font-weight:700;">✓</td><td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:18px;font-weight:700;">✓</td></tr>
+        <tr style="background:#FAFAFA;"><td style="padding:14px 20px;border-bottom:1px solid #F0F0F0;font-size:14px;vertical-align:middle;">Gestion des garanties <span style="font-size:12px;color:var(--gray-mid);">(copieurs, ordis…)</span></td><td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#D8D6D0;font-size:18px;">—</td><td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;color:#1D9E75;font-size:18px;font-weight:700;">✓</td><td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:18px;font-weight:700;">✓</td></tr>
+        <tr style="background:#F0F4F8;"><td colspan="4" style="padding:10px 20px;font-size:11px;font-weight:700;color:var(--blue);letter-spacing:.1em;text-transform:uppercase;background:#EBF4FF;">Interventions &amp; infrastructure</td></tr>
+        <tr style="background:white;"><td style="padding:14px 20px;border-bottom:1px solid #F0F0F0;font-size:14px;vertical-align:middle;">Intervention sur site illimitée</td><td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#D8D6D0;font-size:18px;">—</td><td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;color:#D8D6D0;font-size:18px;">—</td><td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:18px;font-weight:700;">✓</td></tr>
+        <tr style="background:#FAFAFA;"><td style="padding:14px 20px;border-bottom:1px solid #F0F0F0;font-size:14px;vertical-align:middle;">Visite sur site mensuelle</td><td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#D8D6D0;font-size:18px;">—</td><td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;color:#D8D6D0;font-size:18px;">—</td><td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:18px;font-weight:700;">✓</td></tr>
+        <tr style="background:white;"><td style="padding:14px 20px;border-bottom:1px solid #F0F0F0;font-size:14px;vertical-align:middle;">Gestion réseau local <span style="font-size:12px;color:var(--gray-mid);">(câblage, Wi-Fi, VPN)</span></td><td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#D8D6D0;font-size:18px;">—</td><td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;color:#D8D6D0;font-size:18px;">—</td><td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:18px;font-weight:700;">✓</td></tr>
+        <tr style="background:#FAFAFA;"><td style="padding:14px 20px;border-bottom:1px solid #F0F0F0;font-size:14px;vertical-align:middle;">Gestion cloud <span style="font-size:12px;color:var(--gray-mid);">(Azure / AWS)</span></td><td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#D8D6D0;font-size:18px;">—</td><td style="text-align:center;padding:13px 12px;border-bottom:1px solid #E0EDFF;background:#F5FAFF;color:#D8D6D0;font-size:18px;">—</td><td style="text-align:center;padding:13px 12px;border-bottom:1px solid #F0F0F0;color:#1D9E75;font-size:18px;font-weight:700;">✓</td></tr>
+        <tr style="background:white;"><td style="padding:13px 20px;">Audit sécurité semestriel</td><td style="text-align:center;padding:13px 12px;color:#D8D6D0;font-size:18px;">—</td><td style="text-align:center;padding:13px 12px;background:#F5FAFF;color:#D8D6D0;font-size:18px;">—</td><td style="text-align:center;padding:13px 12px;color:#1D9E75;font-size:18px;font-weight:700;">✓</td></tr>
       </tbody>
       <tfoot>
         <tr>
@@ -702,89 +795,82 @@
     </table>
     </div>
   </div>
-  </div>
 </section>
 
 <!-- OPTIONS EN + — MODALE SLIDE -->
-<div id="optionOverlay" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.55);z-index:999;align-items:center;justify-content:center;">
-  <div id="optionPanel" style="background:white;border-radius:16px;padding:2.5rem;max-width:560px;width:90%;margin:auto;position:relative;max-height:85vh;overflow-y:auto;">
-    <button onclick="closeOption()" style="position:absolute;top:16px;right:16px;background:none;border:none;font-size:22px;cursor:pointer;color:#888;line-height:1;">✕</button>
-
-    <!-- PARC INFORMATIQUE -->
-    <div id="opt-parc">
-      <div style="font-size:11px;font-weight:700;color:var(--blue);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.5rem;">Option complémentaire</div>
-      <div style="font-family:Sora,sans-serif;font-size:24px;font-weight:600;color:var(--navy);margin-bottom:.25rem;">Gestion du parc informatique</div>
-      <div style="font-size:13px;color:var(--gray-mid);margin-bottom:1.25rem;">À partir de <strong style="color:var(--navy);">sur devis</strong> HT / mois</div>
-      <p style="font-size:14px;color:var(--gray-mid);line-height:1.7;margin-bottom:1.25rem;">Confiez la supervision et l'optimisation de votre parc informatique pour une infrastructure toujours performante, sécurisée et adaptée à l'évolution de vos besoins.</p>
-      <ul class="offre-features" style="margin-bottom:1.5rem;">
-        <li>Supervision du parc informatique sous 4h</li>
-        <li>Gestion des connexions internet (Fibre FTTO &amp; FTTH, SDSL, 4G)</li>
-        <li>Prise en main à distance illimitée</li>
-        <li>Intervention sur site illimitée</li>
-        <li>Une visite sur site minimum par mois</li>
-        <li>Gestion du réseau local (câblage, Wi-Fi)</li>
-        <li>Administration Office 365 &amp; Google Workspace</li>
-        <li>Gestion VPN</li>
-        <li>Relation avec les opérateurs et hébergeurs</li>
-        <li>Gestion des serveurs (production et sauvegarde)</li>
-      </ul>
-      <a href="#contact" onclick="closeOption()" class="offre-btn primary" style="display:block;text-align:center;">Demander un devis</a>
+<div id="optionOverlay" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);z-index:999;align-items:center;justify-content:center;backdrop-filter:blur(4px);">
+  <div id="optionPanel" style="background:#fff;border-radius:20px;padding:0;max-width:580px;width:92%;margin:auto;position:relative;max-height:90vh;overflow-y:auto;box-shadow:0 24px 80px rgba(0,0,0,0.25);">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;padding:2rem 2rem 0;">
+      <div style="font-size:11px;font-weight:700;color:var(--blue-mid);letter-spacing:.1em;text-transform:uppercase;">Option complémentaire</div>
+      <button onclick="closeOption()" style="background:none;border:none;font-size:24px;cursor:pointer;color:#AAAAAA;line-height:1;padding:0;margin-left:1rem;">✕</button>
     </div>
-
-    <!-- SI EXTERNALISÉ -->
-    <div id="opt-si" style="display:none;">
-      <div style="font-size:11px;font-weight:700;color:var(--blue);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.5rem;">Option complémentaire</div>
-      <div style="font-family:Sora,sans-serif;font-size:24px;font-weight:600;color:var(--navy);margin-bottom:.25rem;">SI Externalisé</div>
-      <div style="font-size:13px;color:var(--gray-mid);margin-bottom:1.25rem;"><strong style="color:var(--navy);">Sur devis</strong></div>
-      <p style="font-size:14px;color:var(--gray-mid);line-height:1.7;margin-bottom:1.25rem;">Optez pour un SI externalisé et bénéficiez d'une gestion optimisée, sécurisée et évolutive de votre infrastructure IT, sans les contraintes internes, pour vous concentrer pleinement sur votre activité.</p>
-      <ul class="offre-features" style="margin-bottom:1.5rem;">
-        <li>Encadrement de l'organisation IT</li>
-        <li>Conseils et pilotage de projets</li>
-        <li>Optimisation de votre système d'information</li>
-        <li>Stratégie de sécurité et de sauvegarde</li>
-        <li>Rédaction documentation &amp; accompagnement des enjeux</li>
+    <div id="opt-parc" style="padding:1rem 2rem 2rem;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1rem;flex-wrap:wrap;gap:.5rem;">
+        <div style="font-family:'Sora','Helvetica Neue',sans-serif;font-size:28px;font-weight:700;color:var(--navy);line-height:1.2;">Gestion du parc<br>informatique</div>
+        <div style="text-align:right;"><div style="font-size:11px;color:var(--gray-mid);font-weight:500;">A partir de</div><div style="font-family:'Sora','Helvetica Neue',sans-serif;font-size:38px;font-weight:700;color:var(--navy);line-height:1;">80 €</div><div style="font-size:11px;color:var(--gray-mid);">HT./mois</div></div>
+      </div>
+      <div style="height:2px;background:var(--navy);margin-bottom:1.25rem;border-radius:2px;"></div>
+      <p style="font-size:14px;color:var(--gray-mid);line-height:1.75;margin-bottom:1.25rem;">Confiez la supervision et l'optimisation de votre parc informatique pour une infrastructure toujours performante, sécurisée et adaptée à l'évolution de vos besoins.</p>
+      <ul style="list-style:disc;padding-left:1.25rem;display:flex;flex-direction:column;gap:8px;margin-bottom:2rem;">
+        <li style="font-size:14px;color:var(--gray-dark);line-height:1.5;">Supervision du parc informatique sous 4h</li>
+        <li style="font-size:14px;color:var(--gray-dark);line-height:1.5;">Gestion des connexions internet (Fibre FTTO &amp; FTTH, SDSL, 4G)</li>
+        <li style="font-size:14px;color:var(--gray-dark);line-height:1.5;">Prise en main à distance illimitée</li>
+        <li style="font-size:14px;color:var(--gray-dark);line-height:1.5;">Intervention sur site illimitée</li>
+        <li style="font-size:14px;color:var(--gray-dark);line-height:1.5;">Une visite sur site minimum par mois</li>
+        <li style="font-size:14px;color:var(--gray-dark);line-height:1.5;">Gestion du réseau local (Câblage, WiFi)</li>
+        <li style="font-size:14px;color:var(--gray-dark);line-height:1.5;">Administration Office 365 &amp; Google Workspace</li>
+        <li style="font-size:14px;color:var(--gray-dark);line-height:1.5;">Gestion VPN</li>
+        <li style="font-size:14px;color:var(--gray-dark);line-height:1.5;">Relation avec les différents opérateurs et hébergeurs</li>
+        <li style="font-size:14px;color:var(--gray-dark);line-height:1.5;">Gestion des serveurs (production et sauvegarde)</li>
       </ul>
-      <a href="#contact" onclick="closeOption()" class="offre-btn primary" style="display:block;text-align:center;">Demander un devis</a>
+      <a href="#contact" onclick="closeOption()" style="display:block;text-align:center;padding:14px;border:2px solid var(--navy);border-radius:50px;font-size:14px;font-weight:700;color:var(--navy);text-decoration:none;transition:all .2s;">Demander un devis</a>
     </div>
-
-    <!-- ASTREINTE -->
-    <div id="opt-astreinte" style="display:none;">
-      <div style="font-size:11px;font-weight:700;color:var(--blue);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.5rem;">Option complémentaire</div>
-      <div style="font-family:Sora,sans-serif;font-size:24px;font-weight:600;color:var(--navy);margin-bottom:.25rem;">Astreinte week-end</div>
-      <div style="font-size:13px;color:var(--gray-mid);margin-bottom:1.25rem;"><strong style="color:var(--navy);">Sur devis</strong></div>
-      <p style="font-size:14px;color:var(--gray-mid);line-height:1.7;margin-bottom:1.25rem;">Pour les structures qui ne peuvent pas se permettre une interruption même le week-end. Un technicien disponible le samedi matin et en cas d'urgence critique le dimanche.</p>
-      <ul class="offre-features" style="margin-bottom:1.5rem;">
-        <li>Disponibilité samedi et dimanche (9h–17h)</li>
-        <li>Astreinte téléphonique urgences critiques</li>
-        <li>Intervention à distance prioritaire</li>
-        <li>Rapport d'intervention systématique</li>
+    <div id="opt-si" style="display:none;padding:1rem 2rem 2rem;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1rem;flex-wrap:wrap;gap:.5rem;">
+        <div style="font-family:'Sora','Helvetica Neue',sans-serif;font-size:28px;font-weight:700;color:var(--navy);line-height:1.2;">SI<br>Externalisé</div>
+        <div style="text-align:right;"><div style="font-family:'Sora','Helvetica Neue',sans-serif;font-size:22px;font-weight:700;color:var(--navy);line-height:1;margin-top:.5rem;">Sur devis</div></div>
+      </div>
+      <div style="height:2px;background:var(--navy);margin-bottom:1.25rem;border-radius:2px;"></div>
+      <p style="font-size:14px;color:var(--gray-mid);line-height:1.75;margin-bottom:1.25rem;">Optez pour un SI externalisé et bénéficiez d'une gestion optimisée, sécurisée et évolutive de votre infrastructure IT, sans les contraintes internes, pour vous concentrer pleinement sur votre activité.</p>
+      <ul style="list-style:disc;padding-left:1.25rem;display:flex;flex-direction:column;gap:8px;margin-bottom:2rem;">
+        <li style="font-size:14px;color:var(--gray-dark);">Encadrement de l'organisation</li>
+        <li style="font-size:14px;color:var(--gray-dark);">Conseils et projets</li>
+        <li style="font-size:14px;color:var(--gray-dark);">Optimisation de votre SI</li>
+        <li style="font-size:14px;color:var(--gray-dark);">Stratégie de sécurité et de sauvegarde</li>
+        <li style="font-size:14px;color:var(--gray-dark);">Rédaction documentation appropriée et accompagnement des enjeux</li>
       </ul>
-      <a href="#contact" onclick="closeOption()" class="offre-btn primary" style="display:block;text-align:center;">Demander un devis</a>
+      <a href="#contact" onclick="closeOption()" style="display:block;text-align:center;padding:14px;border:2px solid var(--navy);border-radius:50px;font-size:14px;font-weight:700;color:var(--navy);text-decoration:none;">Demander un devis</a>
     </div>
-
+    <div id="opt-astreinte" style="display:none;padding:1rem 2rem 2rem;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1rem;flex-wrap:wrap;gap:.5rem;">
+        <div style="font-family:'Sora','Helvetica Neue',sans-serif;font-size:28px;font-weight:700;color:var(--navy);line-height:1.2;">Astreinte<br>week-end</div>
+        <div style="text-align:right;"><div style="font-family:'Sora','Helvetica Neue',sans-serif;font-size:22px;font-weight:700;color:var(--navy);line-height:1;margin-top:.5rem;">Sur devis</div></div>
+      </div>
+      <div style="height:2px;background:var(--navy);margin-bottom:1.25rem;border-radius:2px;"></div>
+      <p style="font-size:14px;color:var(--gray-mid);line-height:1.75;margin-bottom:1.25rem;">Pour les structures qui ne peuvent pas se permettre une interruption même le week-end. Un technicien disponible samedi et dimanche pour toute urgence critique.</p>
+      <ul style="list-style:disc;padding-left:1.25rem;display:flex;flex-direction:column;gap:8px;margin-bottom:2rem;">
+        <li style="font-size:14px;color:var(--gray-dark);">Disponibilité samedi et dimanche (9h–17h)</li>
+        <li style="font-size:14px;color:var(--gray-dark);">Astreinte téléphonique urgences critiques</li>
+        <li style="font-size:14px;color:var(--gray-dark);">Intervention à distance prioritaire</li>
+        <li style="font-size:14px;color:var(--gray-dark);">Rapport d'intervention systématique</li>
+      </ul>
+      <a href="#contact" onclick="closeOption()" style="display:block;text-align:center;padding:14px;border:2px solid var(--navy);border-radius:50px;font-size:14px;font-weight:700;color:var(--navy);text-decoration:none;">Demander un devis</a>
+    </div>
   </div>
 </div>
-
 <script>
 function showOption(id) {
-  document.getElementById('opt-parc').style.display = 'none';
-  document.getElementById('opt-si').style.display = 'none';
-  document.getElementById('opt-astreinte').style.display = 'none';
-  document.getElementById('opt-' + id).style.display = 'block';
-  var overlay = document.getElementById('optionOverlay');
-  overlay.style.display = 'flex';
-  document.body.style.overflow = 'hidden';
+  ['parc','si','astreinte'].forEach(x => document.getElementById('opt-'+x).style.display='none');
+  document.getElementById('opt-'+id).style.display='block';
+  document.getElementById('optionOverlay').style.display='flex';
+  document.body.style.overflow='hidden';
 }
 function closeOption() {
-  document.getElementById('optionOverlay').style.display = 'none';
-  document.body.style.overflow = '';
+  document.getElementById('optionOverlay').style.display='none';
+  document.body.style.overflow='';
 }
-document.getElementById('optionOverlay').addEventListener('click', function(e) {
-  if (e.target === this) closeOption();
-});
+document.getElementById('optionOverlay').addEventListener('click',function(e){if(e.target===this)closeOption();});
 </script>
-
-
 
 <!-- ENGAGEMENTS -->
 <section class="engagements" id="engagements">
@@ -792,64 +878,14 @@ document.getElementById('optionOverlay').addEventListener('click', function(e) {
   <div class="section-title">Réactifs, locaux et bienveillants</div>
   <p class="section-sub">NetRelais s'engage à assurer un service rapide et de qualité, et toujours avec le sourire.</p>
   <div class="engagements-grid">
-    <div class="engagement-card">
-      <div class="engagement-icon" style="background:var(--blue-pale);">
-        <svg viewBox="0 0 24 24" style="stroke:var(--navy)"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      </div>
-      <div>
-        <div class="engagement-title">Service garanti</div>
-        <div class="engagement-desc">Disponibilité et qualité de service assurées par contrat, avec des niveaux de SLA clairs.</div>
-      </div>
-    </div>
-    <div class="engagement-card">
-      <div class="engagement-icon" style="background:var(--teal-light);">
-        <svg viewBox="0 0 24 24" style="stroke:var(--teal)"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-      </div>
-      <div>
-        <div class="engagement-title">Intervention rapide</div>
-        <div class="engagement-desc">Prise en charge garantie sous 4h à 24h selon votre formule. Réponse humaine, pas automatique.</div>
-      </div>
-    </div>
-    <div class="engagement-card">
-      <div class="engagement-icon" style="background:var(--blue-pale);">
-        <svg viewBox="0 0 24 24" style="stroke:var(--navy)"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-      </div>
-      <div>
-        <div class="engagement-title">Techniciens diplômés</div>
-        <div class="engagement-desc">Expertise certifiée en administration système, réseau, cloud et sécurité informatique.</div>
-      </div>
-    </div>
-    <div class="engagement-card">
-      <div class="engagement-icon" style="background:var(--teal-light);">
-        <svg viewBox="0 0 24 24" style="stroke:var(--teal)"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-      </div>
-      <div>
-        <div class="engagement-title">Accompagnement dédié</div>
-        <div class="engagement-desc">Un interlocuteur unique qui connaît votre infrastructure et vos équipes, basé en Nouvelle-Aquitaine.</div>
-      </div>
-    </div>
-    <div class="engagement-card">
-      <div class="engagement-icon" style="background:var(--blue-pale);">
-        <svg viewBox="0 0 24 24" style="stroke:var(--navy)"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-      </div>
-      <div>
-        <div class="engagement-title">Matériels assurés</div>
-        <div class="engagement-desc">Conseil à l'achat, configuration et garantie de bon fonctionnement de votre parc matériel.</div>
-      </div>
-    </div>
-    <div class="engagement-card">
-      <div class="engagement-icon" style="background:var(--teal-light);">
-        <svg viewBox="0 0 24 24" style="stroke:var(--teal)"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-      </div>
-      <div>
-        <div class="engagement-title">Expertise diversifiée</div>
-        <div class="engagement-desc">Linux, Windows Server, Azure, réseaux, sécurité — un seul prestataire pour toutes vos problématiques.</div>
-      </div>
-    </div>
+    <div class="engagement-card"><div class="engagement-icon" style="background:var(--blue-pale);"><svg viewBox="0 0 24 24" style="stroke:var(--navy)"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><div class="engagement-title">Service garanti</div><div class="engagement-desc">Disponibilité et qualité de service assurées par contrat, avec des niveaux de SLA clairs.</div></div></div>
+    <div class="engagement-card"><div class="engagement-icon" style="background:var(--teal-light);"><svg viewBox="0 0 24 24" style="stroke:var(--teal)"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><div class="engagement-title">Intervention rapide</div><div class="engagement-desc">Prise en charge garantie sous 4h à 24h selon votre formule. Réponse humaine, pas automatique.</div></div></div>
+    <div class="engagement-card"><div class="engagement-icon" style="background:var(--blue-pale);"><svg viewBox="0 0 24 24" style="stroke:var(--navy)"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><div><div class="engagement-title">Techniciens diplômés</div><div class="engagement-desc">Expertise certifiée en administration système, réseau, cloud et sécurité informatique.</div></div></div>
+    <div class="engagement-card"><div class="engagement-icon" style="background:var(--teal-light);"><svg viewBox="0 0 24 24" style="stroke:var(--teal)"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div><div class="engagement-title">Accompagnement dédié</div><div class="engagement-desc">Un interlocuteur unique qui connaît votre infrastructure et vos équipes, basé en Nouvelle-Aquitaine.</div></div></div>
+    <div class="engagement-card"><div class="engagement-icon" style="background:var(--blue-pale);"><svg viewBox="0 0 24 24" style="stroke:var(--navy)"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div><div><div class="engagement-title">Matériels assurés</div><div class="engagement-desc">Conseil à l'achat, configuration et garantie de bon fonctionnement de votre parc matériel.</div></div></div>
+    <div class="engagement-card"><div class="engagement-icon" style="background:var(--teal-light);"><svg viewBox="0 0 24 24" style="stroke:var(--teal)"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div><div class="engagement-title">Expertise diversifiée</div><div class="engagement-desc">Linux, Windows Server, Azure, réseaux, sécurité — un seul prestataire pour toutes vos problématiques.</div></div></div>
   </div>
 </section>
-
-
 
 <!-- TARIFICATION -->
 <section class="tarification">
@@ -859,20 +895,34 @@ document.getElementById('optionOverlay').addEventListener('click', function(e) {
     <p class="section-sub">Pas de frais cachés, pas de mauvaise surprise. Un forfait fixe au poste, ajusté à la taille réelle de votre structure.</p>
   </div>
   <div class="tarif-boxes">
-    <div class="tarif-box">
-      <div class="tarif-box-icon">💶</div>
-      <div class="tarif-box-title">Tarifs transparents</div>
-      <div class="tarif-box-desc">Pas de frais cachés, tout est dans le contrat</div>
-    </div>
-    <div class="tarif-box">
-      <div class="tarif-box-icon">🔓</div>
-      <div class="tarif-box-title">Sans engagement</div>
-      <div class="tarif-box-desc">Résiliation avec 30 jours de préavis</div>
-    </div>
-    <div class="tarif-box">
-      <div class="tarif-box-icon">📊</div>
-      <div class="tarif-box-title">Budget maîtrisé</div>
-      <div class="tarif-box-desc">Forfait fixe mensuel, sans mauvaise surprise</div>
+    <div class="tarif-box"><div class="tarif-box-icon">💶</div><div class="tarif-box-title">Tarifs transparents</div><div class="tarif-box-desc">Pas de frais cachés, tout est dans le contrat</div></div>
+    <div class="tarif-box"><div class="tarif-box-icon">🔓</div><div class="tarif-box-title">Sans engagement</div><div class="tarif-box-desc">Résiliation avec 30 jours de préavis</div></div>
+    <div class="tarif-box"><div class="tarif-box-icon">📊</div><div class="tarif-box-title">Budget maîtrisé</div><div class="tarif-box-desc">Forfait fixe mensuel, sans mauvaise surprise</div></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="background:var(--gray-pale);padding:60px 5%;">
+  <div style="max-width:700px;margin:0 auto;">
+    <div class="section-label" style="text-align:center;">Questions fréquentes</div>
+    <div class="section-title" style="text-align:center;margin-bottom:2rem;">Ce que vous vous demandez sûrement</div>
+    <div style="display:flex;flex-direction:column;gap:12px;">
+      <details style="background:white;border:1px solid var(--gray-light);border-radius:var(--radius);padding:1.25rem;cursor:pointer;box-shadow:0 2px 8px rgba(10,15,30,0.05);">
+        <summary style="font-weight:600;font-size:15px;color:var(--navy);list-style:none;display:flex;justify-content:space-between;align-items:center;">Est-ce qu'il y a un engagement de durée ?<span style="color:var(--blue-mid);font-size:20px;font-weight:300;">+</span></summary>
+        <p style="margin-top:12px;font-size:14px;color:var(--gray-mid);line-height:1.7;">Non. Toutes nos offres sont sans engagement. Un simple préavis de 30 jours par email suffit pour résilier. Pas de frais cachés, pas de pénalité.</p>
+      </details>
+      <details style="background:white;border:1px solid var(--gray-light);border-radius:var(--radius);padding:1.25rem;cursor:pointer;box-shadow:0 2px 8px rgba(10,15,30,0.05);">
+        <summary style="font-weight:600;font-size:15px;color:var(--navy);list-style:none;display:flex;justify-content:space-between;align-items:center;">Comment se passe la première intervention ?<span style="color:var(--blue-mid);font-size:20px;font-weight:300;">+</span></summary>
+        <p style="margin-top:12px;font-size:14px;color:var(--gray-mid);line-height:1.7;">On commence par un audit gratuit de votre installation — sur site ou à distance selon votre préférence. On vous remet un rapport clair, puis on vous propose l'offre adaptée. Aucune obligation de suite.</p>
+      </details>
+      <details style="background:white;border:1px solid var(--gray-light);border-radius:var(--radius);padding:1.25rem;cursor:pointer;box-shadow:0 2px 8px rgba(10,15,30,0.05);">
+        <summary style="font-weight:600;font-size:15px;color:var(--navy);list-style:none;display:flex;justify-content:space-between;align-items:center;">Je n'ai que 3 ou 4 postes, c'est possible ?<span style="color:var(--blue-mid);font-size:20px;font-weight:300;">+</span></summary>
+        <p style="margin-top:12px;font-size:14px;color:var(--gray-mid);line-height:1.7;">Absolument. Nos offres sont facturées au poste, donc adaptées même aux très petites structures. Pour 4 postes, le pack Net'Start revient à moins de 70 €/mois.</p>
+      </details>
+      <details style="background:white;border:1px solid var(--gray-light);border-radius:var(--radius);padding:1.25rem;cursor:pointer;box-shadow:0 2px 8px rgba(10,15,30,0.05);">
+        <summary style="font-weight:600;font-size:15px;color:var(--navy);list-style:none;display:flex;justify-content:space-between;align-items:center;">Intervenez-vous uniquement à distance ?<span style="color:var(--blue-mid);font-size:20px;font-weight:300;">+</span></summary>
+        <p style="margin-top:12px;font-size:14px;color:var(--gray-mid);line-height:1.7;">Non, nous intervenons aussi sur site en Nouvelle-Aquitaine. Le pack Net'Boost inclut une visite trimestrielle, et le pack Net'Max des interventions illimitées.</p>
+      </details>
     </div>
   </div>
 </section>
@@ -884,16 +934,12 @@ document.getElementById('optionOverlay').addEventListener('click', function(e) {
       <h2>Parlons de votre infrastructure</h2>
       <p>Je vous propose un audit gratuit de 1h de votre installation, sans engagement. Basé en Nouvelle-Aquitaine, je me déplace chez vous ou interviens à distance.</p>
       <div style="margin-top:1.5rem;display:flex;flex-direction:column;gap:10px;">
-        <div style="font-size:14px;color:var(--blue-light);display:flex;align-items:center;gap:10px;">
-          <span>📞</span> 06 10 79 64 40
-        </div>
-
-        <div style="font-size:14px;color:var(--blue-light);display:flex;align-items:center;gap:10px;">
-          <span>📍</span> Nouvelle-Aquitaine
-        </div>
+        <div style="font-size:14px;color:var(--blue-light);display:flex;align-items:center;gap:10px;"><span>📞</span> <a href="tel:+33610796440" style="color:var(--blue-light);text-decoration:none;">06 10 79 64 40</a></div>
+        <div style="font-size:14px;color:var(--blue-light);display:flex;align-items:center;gap:10px;"><span>🔗</span> <a href="https://www.linkedin.com/in/netrelais-it-68785a40b/" target="_blank" rel="noopener noreferrer" style="color:var(--blue-light);text-decoration:none;">LinkedIn — NetRelais IT</a></div>
+        <div style="font-size:14px;color:var(--blue-light);display:flex;align-items:center;gap:10px;"><span>📍</span> <a href="https://maps.google.com/?q=Uzerche,+Corrèze,+Nouvelle-Aquitaine" target="_blank" rel="noopener noreferrer" style="color:var(--blue-light);text-decoration:underline;text-underline-offset:3px;">Uzerche, Nouvelle-Aquitaine</a></div>
       </div>
     </div>
-    <form class="contact-form" action="https://formspree.io/f/mpqnwaqk" method="POST" id="contactForm">
+    <form class="contact-form" action="https://formspree.io/f/mpqnwaqk" method="POST" id="contactForm" aria-label="Formulaire de contact NetRelais" novalidate>
       <input type="text" name="nom" placeholder="Votre nom &amp; prénom" required>
       <input type="text" name="entreprise" placeholder="Nom de votre entreprise">
       <input type="email" name="email" placeholder="Votre email" required>
@@ -901,98 +947,36 @@ document.getElementById('optionOverlay').addEventListener('click', function(e) {
       <input type="hidden" name="_replyto" value="contact@netrelais.fr">
       <input type="hidden" name="_subject" value="[NetRelais] Nouvelle demande de contact">
       <textarea name="message" placeholder="Décrivez votre situation IT en quelques mots..." required></textarea>
-      <button type="submit" id="submitBtn">Demander mon audit gratuit →</button>
-      <div id="formSuccess" style="display:none;background:rgba(29,158,117,0.15);border:1px solid #1D9E75;border-radius:8px;padding:12px;color:#E1F5EE;font-size:14px;text-align:center;">
-        ✓ Message envoyé ! Nous vous répondrons sous 24h.
-      </div>
+      <!-- Honeypot anti-spam -->
+      <input type="text" name="_gotcha" style="display:none;" tabindex="-1" autocomplete="off">
+      <button type="submit" id="submitBtn" style="transition:all .25s;border-radius:50px;font-weight:700;letter-spacing:.02em;">Demander mon audit gratuit →</button>
+      <div id="formSuccess" style="display:none;background:rgba(29,158,117,0.15);border:1px solid #1D9E75;border-radius:8px;padding:12px;color:#E1F5EE;font-size:14px;text-align:center;">✓ Message envoyé ! Nous vous répondrons sous 24h.</div>
     </form>
     <script>
       document.getElementById("contactForm").addEventListener("submit", async function(e) {
         e.preventDefault();
         const btn = document.getElementById("submitBtn");
-        btn.textContent = "Envoi en cours...";
-        btn.disabled = true;
+        btn.textContent = "Envoi en cours..."; btn.disabled = true;
         const data = new FormData(this);
         try {
           const res = await fetch("https://formspree.io/f/mpqnwaqk", { method:"POST", body:data, headers:{Accept:"application/json"} });
-          if (res.ok) {
-            document.getElementById("formSuccess").style.display = "block";
-            this.reset();
-            btn.textContent = "Message envoyé ✓";
-          } else {
-            btn.textContent = "Erreur — réessayez";
-            btn.disabled = false;
-          }
-        } catch(err) {
-          btn.textContent = "Erreur — réessayez";
-          btn.disabled = false;
-        }
+          if (res.ok) { document.getElementById("formSuccess").style.display = "block"; this.reset(); btn.textContent = "Message envoyé ✓"; }
+          else { btn.textContent = "Erreur — réessayez"; btn.disabled = false; }
+        } catch(err) { btn.textContent = "Erreur — réessayez"; btn.disabled = false; }
       });
     </script>
   </div>
 </section>
 
-<!-- FAQ -->
-<section style="background:var(--gray-pale);padding:60px 5%;">
-  <div style="max-width:700px;margin:0 auto;">
-    <div class="section-label" style="text-align:center;">Questions fréquentes</div>
-    <div class="section-title" style="text-align:center;margin-bottom:2rem;">Ce que vous vous demandez sûrement</div>
-
-    <div style="display:flex;flex-direction:column;gap:12px;">
-
-      <details style="background:white;border:1px solid var(--gray-light);border-radius:var(--radius);padding:1.25rem;cursor:pointer;">
-        <summary style="font-weight:600;font-size:15px;color:var(--navy);list-style:none;display:flex;justify-content:space-between;align-items:center;">
-          Est-ce qu'il y a un engagement de durée ?
-          <span style="color:var(--blue-mid);font-size:20px;font-weight:300;">+</span>
-        </summary>
-        <p style="margin-top:12px;font-size:14px;color:var(--gray-mid);line-height:1.7;">Non. Toutes nos offres sont sans engagement. Un simple préavis de 30 jours par email suffit pour résilier. Pas de frais cachés, pas de pénalité.</p>
-      </details>
-
-      <details style="background:white;border:1px solid var(--gray-light);border-radius:var(--radius);padding:1.25rem;cursor:pointer;">
-        <summary style="font-weight:600;font-size:15px;color:var(--navy);list-style:none;display:flex;justify-content:space-between;align-items:center;">
-          Comment se passe la première intervention ?
-          <span style="color:var(--blue-mid);font-size:20px;font-weight:300;">+</span>
-        </summary>
-        <p style="margin-top:12px;font-size:14px;color:var(--gray-mid);line-height:1.7;">On commence par un audit gratuit de votre installation — sur site ou à distance selon votre préférence. On vous remet un rapport clair, puis on vous propose l'offre adaptée. Aucune obligation de suite.</p>
-      </details>
-
-      <details style="background:white;border:1px solid var(--gray-light);border-radius:var(--radius);padding:1.25rem;cursor:pointer;">
-        <summary style="font-weight:600;font-size:15px;color:var(--navy);list-style:none;display:flex;justify-content:space-between;align-items:center;">
-          Je n'ai que 3 ou 4 postes, c'est possible ?
-          <span style="color:var(--blue-mid);font-size:20px;font-weight:300;">+</span>
-        </summary>
-        <p style="margin-top:12px;font-size:14px;color:var(--gray-mid);line-height:1.7;">Absolument. Nos offres sont facturées au poste, donc adaptées même aux très petites structures. Pour 4 postes, le pack Net'Start revient à moins de 40 €/mois.</p>
-      </details>
-
-      <details style="background:white;border:1px solid var(--gray-light);border-radius:var(--radius);padding:1.25rem;cursor:pointer;">
-        <summary style="font-weight:600;font-size:15px;color:var(--navy);list-style:none;display:flex;justify-content:space-between;align-items:center;">
-          Intervenez-vous uniquement à distance ?
-          <span style="color:var(--blue-mid);font-size:20px;font-weight:300;">+</span>
-        </summary>
-        <p style="margin-top:12px;font-size:14px;color:var(--gray-mid);line-height:1.7;">Non, nous intervenons aussi sur site en Nouvelle-Aquitaine. Le pack Net'Boost inclut une visite trimestrielle, et le pack Net'Max des interventions illimitées.</p>
-      </details>
-
-    </div>
-  </div>
-</section>
-
 <!-- RUSTDESK -->
-<section style="background:#0A0F1E;padding:40px 5%;text-align:center;">
+<section style="background:#08111E;padding:40px 5%;text-align:center;">
   <div style="max-width:680px;margin:0 auto;">
     <div style="font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#4D9FFF;margin-bottom:.6rem;">Prise en main à distance</div>
     <div style="font-family:Sora,sans-serif;font-size:20px;font-weight:600;color:#E8EEF8;margin-bottom:.6rem;">Télécharger l'outil de prise en main à distance</div>
-    <p style="font-size:14px;color:#3A5070;line-height:1.7;margin-bottom:1.75rem;">Installez RustDesk sur votre poste pour permettre à votre technicien NetRelais d'intervenir à distance en toute sécurité, sans manipulation de votre part.</p>
+    <p style="font-size:14px;color:#3A5070;line-height:1.7;margin-bottom:1.75rem;">Installez RustDesk sur votre poste pour permettre à votre technicien NetRelais d'intervenir à distance en toute sécurité.</p>
     <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
-      <a href="https://github.com/rustdesk/rustdesk/releases/download/1.4.6/rustdesk-1.4.6-x86_64.exe"
-         style="display:inline-flex;align-items:center;gap:10px;background:#1A2A40;border:1px solid #1E3A5C;color:#E8EEF8;text-decoration:none;padding:12px 22px;border-radius:10px;font-size:14px;font-weight:500;">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4D9FFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-        Télécharger — Windows (.exe)
-      </a>
-      <a href="https://github.com/rustdesk/rustdesk/releases/download/1.4.6/rustdesk-1.4.6.dmg"
-         style="display:inline-flex;align-items:center;gap:10px;background:#1A2A40;border:1px solid #1E3A5C;color:#E8EEF8;text-decoration:none;padding:12px 22px;border-radius:10px;font-size:14px;font-weight:500;">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4D9FFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-        Télécharger — macOS (.dmg)
-      </a>
+      <a href="https://github.com/rustdesk/rustdesk/releases/download/1.4.6/rustdesk-1.4.6-x86_64.exe" style="display:inline-flex;align-items:center;gap:10px;background:#1A2A40;border:1px solid #1E3A5C;color:#E8EEF8;text-decoration:none;padding:12px 22px;border-radius:10px;font-size:14px;font-weight:500;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4D9FFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>Télécharger — Windows (.exe)</a>
+      <a href="https://github.com/rustdesk/rustdesk/releases/download/1.4.6/rustdesk-1.4.6.dmg" style="display:inline-flex;align-items:center;gap:10px;background:#1A2A40;border:1px solid #1E3A5C;color:#E8EEF8;text-decoration:none;padding:12px 22px;border-radius:10px;font-size:14px;font-weight:500;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4D9FFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>Télécharger — macOS (.dmg)</a>
     </div>
     <p style="font-size:12px;color:#6B8CAE;margin-top:1.25rem;">RustDesk est un logiciel open source, gratuit et sécurisé. Aucune donnée personnelle collectée.</p>
   </div>
@@ -1011,33 +995,9 @@ document.getElementById('optionOverlay').addEventListener('click', function(e) {
       </div>
       <p class="footer-desc">Votre IT de confiance, à taille humaine. Des solutions efficaces pour la gestion de votre parc informatique en Nouvelle-Aquitaine.</p>
     </div>
-    <div class="footer-col">
-      <div class="footer-col-title">Navigation</div>
-      <ul>
-        <li><a href="#solutions">Nos solutions</a></li>
-        <li><a href="#offres">Nos offres</a></li>
-        <li><a href="#engagements">Engagements</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <div class="footer-col-title">Solutions</div>
-      <ul>
-        <li><a href="#solutions">Réseaux</a></li>
-        <li><a href="#solutions">Protection</a></li>
-        <li><a href="#solutions">Infogérance</a></li>
-        <li><a href="#solutions">Collaboration</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <div class="footer-col-title">Contact</div>
-      <ul>
-        <li><a href="tel:+33610796440">📞 06 10 79 64 40</a></li>
-        <li><a href="mailto:contact@netrelais.fr">contact@netrelais.fr</a></li>
-        <li><a href="#">Nouvelle-Aquitaine</a></li>
-        <li><a href="#">Mentions légales</a></li>
-      </ul>
-    </div>
+    <div class="footer-col"><div class="footer-col-title">Navigation</div><ul><li><a href="#solutions">Nos solutions</a></li><li><a href="#offres">Nos offres</a></li><li><a href="#engagements">Engagements</a></li><li><a href="#contact">Contact</a></li></ul></div>
+    <div class="footer-col"><div class="footer-col-title">Solutions</div><ul><li><a href="#solutions">Réseaux</a></li><li><a href="#solutions">Protection</a></li><li><a href="#solutions">Infogérance</a></li><li><a href="#solutions">Collaboration</a></li></ul></div>
+    <div class="footer-col"><div class="footer-col-title">Contact</div><ul><li><a href="tel:+33610796440">📞 06 10 79 64 40</a></li><li><a href="mailto:contact@netrelais.fr">✉️ contact@netrelais.fr</a></li><li><a href="https://www.linkedin.com/in/netrelais-it-68785a40b/" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a></li><li><a href="https://maps.google.com/?q=Uzerche,+Corrèze,+Nouvelle-Aquitaine" target="_blank" rel="noopener noreferrer">📍 Uzerche, Nouvelle-Aquitaine</a></li><li><a href="#" onclick="document.getElementById('mentionsOverlay').style.display='flex';document.body.style.overflow='hidden';return false;">Mentions légales</a></li></ul></div>
   </div>
   <div class="footer-bottom">
     <p>©2025 NetRelais — Tous droits réservés</p>
@@ -1045,5 +1005,202 @@ document.getElementById('optionOverlay').addEventListener('click', function(e) {
   </div>
 </footer>
 
+<!-- MODALE MENTIONS LÉGALES -->
+<div id="mentionsOverlay" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);z-index:9999;align-items:center;justify-content:center;backdrop-filter:blur(4px);" onclick="if(event.target===this){this.style.display='none';document.body.style.overflow='';}">
+  <div style="background:#fff;border-radius:20px;padding:0;max-width:680px;width:92%;margin:auto;position:relative;max-height:90vh;overflow-y:auto;box-shadow:0 24px 80px rgba(0,0,0,0.25);">
+
+    <!-- Header modale -->
+    <div style="position:sticky;top:0;background:white;z-index:2;display:flex;justify-content:space-between;align-items:center;padding:1.5rem 2rem;border-bottom:1px solid #F0F0EE;border-radius:20px 20px 0 0;">
+      <div>
+        <div style="font-size:11px;font-weight:700;color:#FF5C00;letter-spacing:.1em;text-transform:uppercase;margin-bottom:3px;">Informations légales</div>
+        <div style="font-family:'Sora','Helvetica Neue',sans-serif;font-size:20px;font-weight:700;color:#0A0F1E;">Mentions légales</div>
+      </div>
+      <button onclick="document.getElementById('mentionsOverlay').style.display='none';document.body.style.overflow='';" style="background:#F4F2EB;border:none;width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:18px;color:#5F5E5A;display:flex;align-items:center;justify-content:center;flex-shrink:0;">✕</button>
+    </div>
+
+    <!-- Contenu -->
+    <div style="padding:2rem;">
+
+      <div style="margin-bottom:1.75rem;">
+        <h3 style="font-size:13px;font-weight:700;color:#0A0F1E;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.75rem;padding-bottom:.5rem;border-bottom:2px solid #FF5C00;display:inline-block;">Éditeur du site</h3>
+        <div style="background:#F4F2EB;border-radius:10px;padding:1rem 1.25rem;display:flex;flex-direction:column;gap:.4rem;">
+          <div style="display:flex;gap:.75rem;font-size:14px;"><span style="color:#9E9E9E;min-width:130px;flex-shrink:0;">Dénomination</span><span style="color:#2C2C2A;font-weight:500;">NetRelais</span></div>
+          <div style="display:flex;gap:.75rem;font-size:14px;"><span style="color:#9E9E9E;min-width:130px;flex-shrink:0;">Statut</span><span style="color:#2C2C2A;">Auto-entrepreneur (EI)</span></div>
+          <div style="display:flex;gap:.75rem;font-size:14px;"><span style="color:#9E9E9E;min-width:130px;flex-shrink:0;">Activité</span><span style="color:#2C2C2A;">Infogérance &amp; support IT (APE 6203Z)</span></div>
+          <div style="display:flex;gap:.75rem;font-size:14px;"><span style="color:#9E9E9E;min-width:130px;flex-shrink:0;">Siège social</span><span style="color:#2C2C2A;">Uzerche, Corrèze, Nouvelle-Aquitaine</span></div>
+<div style="display:flex;gap:.75rem;font-size:14px;"><span style="color:#9E9E9E;min-width:130px;flex-shrink:0;">Téléphone</span><span style="color:#2C2C2A;"><a href="tel:+33610796440" style="color:#1A6FD4;text-decoration:none;">06 10 79 64 40</a></span></div>
+          <div style="display:flex;gap:.75rem;font-size:14px;"><span style="color:#9E9E9E;min-width:130px;flex-shrink:0;">Email</span><span style="color:#2C2C2A;"><a href="mailto:contact@netrelais.fr" style="color:#1A6FD4;text-decoration:none;">contact@netrelais.fr</a></span></div>
+        </div>
+      </div>
+
+      <div style="margin-bottom:1.75rem;">
+        <h3 style="font-size:13px;font-weight:700;color:#0A0F1E;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.75rem;padding-bottom:.5rem;border-bottom:2px solid #FF5C00;display:inline-block;">Hébergement</h3>
+        <div style="background:#F4F2EB;border-radius:10px;padding:1rem 1.25rem;display:flex;flex-direction:column;gap:.4rem;">
+          <div style="display:flex;gap:.75rem;font-size:14px;"><span style="color:#9E9E9E;min-width:130px;flex-shrink:0;">Hébergeur</span><span style="color:#2C2C2A;font-weight:500;">GitHub Pages — GitHub, Inc.</span></div>
+          <div style="display:flex;gap:.75rem;font-size:14px;"><span style="color:#9E9E9E;min-width:130px;flex-shrink:0;">Adresse</span><span style="color:#2C2C2A;">88 Colin P Kelly Jr St, San Francisco, CA 94107, USA</span></div>
+          <div style="display:flex;gap:.75rem;font-size:14px;"><span style="color:#9E9E9E;min-width:130px;flex-shrink:0;">Protection CDN</span><span style="color:#2C2C2A;">Cloudflare, Inc. — San Francisco, CA, USA</span></div>
+        </div>
+      </div>
+
+      <div style="margin-bottom:1.75rem;">
+        <h3 style="font-size:13px;font-weight:700;color:#0A0F1E;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.75rem;padding-bottom:.5rem;border-bottom:2px solid #FF5C00;display:inline-block;">Données personnelles &amp; RGPD</h3>
+        <p style="font-size:14px;color:#5F5E5A;line-height:1.75;margin-bottom:.75rem;">NetRelais collecte des données via le formulaire de contact (nom, email, téléphone, message) dans le seul but de traiter votre demande.</p>
+        <div style="background:#F4F2EB;border-radius:10px;padding:1rem 1.25rem;display:flex;flex-direction:column;gap:.4rem;margin-bottom:.75rem;">
+          <div style="display:flex;gap:.75rem;font-size:14px;"><span style="color:#9E9E9E;min-width:130px;flex-shrink:0;">Responsable</span><span style="color:#2C2C2A;">NetRelais — contact@netrelais.fr</span></div>
+          <div style="display:flex;gap:.75rem;font-size:14px;"><span style="color:#9E9E9E;min-width:130px;flex-shrink:0;">Base légale</span><span style="color:#2C2C2A;">Intérêt légitime / exécution d'un contrat</span></div>
+          <div style="display:flex;gap:.75rem;font-size:14px;"><span style="color:#9E9E9E;min-width:130px;flex-shrink:0;">Conservation</span><span style="color:#2C2C2A;">3 ans à compter du dernier contact</span></div>
+          <div style="display:flex;gap:.75rem;font-size:14px;"><span style="color:#9E9E9E;min-width:130px;flex-shrink:0;">Formulaire</span><span style="color:#2C2C2A;">Traité via Formspree (formspree.io)</span></div>
+        </div>
+        <p style="font-size:14px;color:#5F5E5A;line-height:1.75;">Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, d'effacement et d'opposition. Pour exercer vos droits : <a href="mailto:contact@netrelais.fr" style="color:#1A6FD4;text-decoration:none;">contact@netrelais.fr</a>. Réclamation possible auprès de la <a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer" style="color:#1A6FD4;text-decoration:none;">CNIL</a>.</p>
+      </div>
+
+      <div style="margin-bottom:1.75rem;">
+        <h3 style="font-size:13px;font-weight:700;color:#0A0F1E;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.75rem;padding-bottom:.5rem;border-bottom:2px solid #FF5C00;display:inline-block;">Cookies</h3>
+        <p style="font-size:14px;color:#5F5E5A;line-height:1.75;">Ce site n'utilise aucun cookie de traçage ni outil d'analyse tiers. Aucune donnée n'est collectée sans votre accord explicite.</p>
+      </div>
+
+      <div style="margin-bottom:1.75rem;">
+        <h3 style="font-size:13px;font-weight:700;color:#0A0F1E;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.75rem;padding-bottom:.5rem;border-bottom:2px solid #FF5C00;display:inline-block;">Propriété intellectuelle</h3>
+        <p style="font-size:14px;color:#5F5E5A;line-height:1.75;">L'ensemble des éléments du site (textes, graphismes, logos) est la propriété exclusive de NetRelais. Toute reproduction sans autorisation écrite préalable est interdite.</p>
+      </div>
+
+      <div>
+        <h3 style="font-size:13px;font-weight:700;color:#0A0F1E;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.75rem;padding-bottom:.5rem;border-bottom:2px solid #FF5C00;display:inline-block;">Droit applicable</h3>
+        <p style="font-size:14px;color:#5F5E5A;line-height:1.75;">Les présentes mentions légales sont soumises au droit français. En cas de litige, le tribunal compétent est celui du ressort de Corrèze (Nouvelle-Aquitaine), après tentative de résolution amiable.</p>
+      </div>
+
+    </div>
+
+    <!-- Footer modale -->
+    <div style="padding:1rem 2rem;border-top:1px solid #F0F0EE;text-align:center;">
+      <p style="font-size:12px;color:#AAAAAA;">Dernière mise à jour : mai 2025 — NetRelais · contact@netrelais.fr</p>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- BARRE CONSENTEMENT COOKIES -->
+<div id="cookieBanner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:10000;background:white;border-top:1px solid #E8E6E0;box-shadow:0 -8px 32px rgba(10,15,30,0.12);padding:0;">
+  <div style="max-width:1200px;margin:0 auto;padding:1.25rem 5%;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;">
+    
+    <!-- Icône + texte -->
+    <div style="display:flex;align-items:flex-start;gap:14px;flex:1;min-width:260px;">
+      <div style="width:40px;height:40px;background:#F4F2EB;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:20px;">🍪</div>
+      <div>
+        <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;font-weight:700;color:#0A0F1E;margin-bottom:3px;">Ce site utilise des cookies</div>
+        <p style="font-size:13px;color:#5F5E5A;line-height:1.6;margin:0;">Nous utilisons uniquement les cookies strictement nécessaires au fonctionnement du site. Aucun cookie publicitaire ni de traçage. <a href="#" onclick="document.getElementById('mentionsOverlay').style.display='flex';document.body.style.overflow='hidden';return false;" style="color:#1A6FD4;text-decoration:underline;text-underline-offset:2px;">En savoir plus</a></p>
+      </div>
+    </div>
+
+    <!-- Boutons -->
+    <div style="display:flex;gap:10px;flex-shrink:0;flex-wrap:wrap;">
+      <button onclick="rejectCookies()" style="padding:9px 20px;border-radius:50px;border:1.5px solid #D3D1C7;background:transparent;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:600;color:#5F5E5A;cursor:pointer;transition:all .2s;white-space:nowrap;">
+        Refuser
+      </button>
+      <button onclick="acceptCookies()" style="padding:9px 20px;border-radius:50px;border:none;background:#0A0F1E;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:600;color:white;cursor:pointer;transition:all .2s;white-space:nowrap;box-shadow:0 2px 8px rgba(10,15,30,0.2);">
+        Accepter
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<script>
+(function() {
+  var consent = localStorage.getItem('nr_cookie_consent');
+  if (!consent) {
+    // Afficher après 800ms pour laisser la page charger
+    setTimeout(function() {
+      var b = document.getElementById('cookieBanner');
+      if (b) {
+        b.style.display = 'block';
+        b.style.animation = 'slideUpBanner .4s cubic-bezier(.4,0,.2,1)';
+      }
+    }, 800);
+  }
+
+  var style = document.createElement('style');
+  style.textContent = '@keyframes slideUpBanner { from { transform: translateY(100%); opacity:0; } to { transform: translateY(0); opacity:1; } }';
+  document.head.appendChild(style);
+})();
+
+function acceptCookies() {
+  localStorage.setItem('nr_cookie_consent', 'accepted');
+  hideBanner();
+}
+function rejectCookies() {
+  localStorage.setItem('nr_cookie_consent', 'rejected');
+  hideBanner();
+}
+function hideBanner() {
+  var b = document.getElementById('cookieBanner');
+  if (b) {
+    b.style.transition = 'transform .3s ease, opacity .3s ease';
+    b.style.transform = 'translateY(100%)';
+    b.style.opacity = '0';
+    setTimeout(function() { b.style.display = 'none'; }, 300);
+  }
+}
+</script>
+
+<script>
+// Animation d'entrée au scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.opacity = '1';
+      e.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.solution-card, .offre-card, .engagement-card, .tarif-box').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(24px)';
+  el.style.transition = 'opacity .5s ease, transform .5s ease';
+  observer.observe(el);
+});
+
+// Hover dynamique sur les boutons options
+document.querySelectorAll('[onclick^="showOption"]').forEach(btn => {
+  btn.addEventListener('mouseenter', () => { btn.style.color = 'var(--navy)'; btn.style.fontWeight = '700'; });
+  btn.addEventListener('mouseleave', () => { btn.style.color = 'var(--blue)'; btn.style.fontWeight = '500'; });
+});
+
+// FAQ : animation ouverture
+document.querySelectorAll('details').forEach(d => {
+  d.addEventListener('toggle', () => {
+    const summary = d.querySelector('summary span');
+    if (summary) summary.textContent = d.open ? '−' : '+';
+  });
+});
+
+// Smooth scroll pour les ancres
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  });
+});
+
+// Modale : animation entrée
+const overlay = document.getElementById('optionOverlay');
+if (overlay) {
+  overlay.addEventListener('transitionend', () => {});
+  const panel = document.getElementById('optionPanel');
+  const origShow = window.showOption;
+  window.showOption = function(id) {
+    origShow(id);
+    panel.style.transform = 'scale(0.95) translateY(10px)';
+    panel.style.opacity = '0';
+    panel.style.transition = 'transform .25s cubic-bezier(.4,0,.2,1), opacity .25s';
+    requestAnimationFrame(() => {
+      panel.style.transform = 'scale(1) translateY(0)';
+      panel.style.opacity = '1';
+    });
+  };
+}
+</script>
 </body>
 </html>
