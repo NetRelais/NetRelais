@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Infogérance ou informaticien interne ? Comparatif complet des coûts pour les TPE/PME.">
+<meta name="keywords" content="infogérance vs DSI interne, coût informaticien PME, externaliser informatique TPE">
+<meta name="author" content="NetRelais">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.netrelais.fr/blog/infogerance-vs-dsi-interne-tpe.html">
+<meta property="og:title" content="Infogérance vs DSI interne : ce qui change vraiment pour une TPE — NetRelais">
+<meta property="og:description" content="Infogérance ou informaticien interne ? Comparatif complet des coûts pour les TPE/PME.">
+<meta property="og:type" content="article">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<title>Infogérance vs DSI interne : ce qui change vraiment pour une TPE — NetRelais</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html,body{overflow-x:hidden;}
+:root{--navy:#0A0F1E;--blue:#1A6FD4;--orange:#FF5C00;--teal:#1D9E75;--dark:#2C2C2A;--mid:#5F5E5A;--light:#D3D1C7;--pale:#F4F2EB;--white:#fff;--r:12px;}
+body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--dark);background:var(--white);font-size:16px;line-height:1.75;}
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,.06);display:flex;align-items:center;justify-content:space-between;padding:0 5%;height:64px;box-shadow:0 2px 16px rgba(10,15,30,.06);}
+.back{font-size:13px;color:var(--mid);text-decoration:none;display:flex;align-items:center;gap:6px;font-weight:500;}
+.back:hover{color:var(--navy);}
+.ncta{background:var(--navy);color:white;padding:8px 18px;border-radius:50px;font-size:13px;font-weight:700;text-decoration:none;}
+.hero{padding:52px 5% 44px;background:var(--pale);border-bottom:1px solid var(--light);}
+.pill{display:inline-block;background:rgba(255,92,0,.1);color:var(--orange);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 14px;border-radius:20px;margin-bottom:1.25rem;}
+.hero h1{font-size:32px;font-weight:700;color:var(--navy);line-height:1.2;margin-bottom:1rem;letter-spacing:-.5px;}
+.meta{display:flex;gap:1.5rem;flex-wrap:wrap;font-size:13px;color:var(--mid);}
+.outer{max-width:1060px;margin:0 auto;padding:48px 5%;}
+.cols{display:flex;gap:3rem;align-items:flex-start;}
+.art{flex:1 1 0;min-width:0;overflow:hidden;}
+.sdb{flex:0 0 250px;width:250px;min-width:250px;max-width:250px;position:sticky;top:80px;}
+.sbc{background:var(--pale);border-radius:var(--r);padding:1.1rem 1.2rem;margin-bottom:.9rem;overflow:hidden;}
+.sbc.dark{background:var(--navy);}
+.sbc h4{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.7rem;color:var(--navy);}
+.sbc.dark h4{color:rgba(255,255,255,.45);}
+.toc-a{display:block;font-size:12px;color:var(--mid);text-decoration:none;padding:4px 10px;border-left:2px solid var(--light);border-radius:0 5px 5px 0;line-height:1.4;margin-bottom:2px;transition:all .15s;overflow:hidden;}
+.toc-a:hover,.toc-a.on{color:var(--navy);border-left-color:var(--orange);background:rgba(255,92,0,.06);font-weight:600;}
+.sb-phone{font-size:19px;font-weight:700;color:var(--navy);text-decoration:none;display:block;margin-bottom:.2rem;}
+.sb-hrs{font-size:11px;color:var(--mid);margin-bottom:.35rem;}
+.sb-mail{font-size:12px;color:var(--blue);text-decoration:none;}
+.sb-desc{font-size:12px;color:rgba(255,255,255,.6);line-height:1.55;margin-bottom:.5rem;}
+.sb-btn{display:block;text-align:center;background:white;color:var(--navy);padding:9px;border-radius:50px;font-weight:700;font-size:13px;text-decoration:none;}
+.other-a{display:block;font-size:12px;color:var(--blue);text-decoration:none;padding:6px 0;border-bottom:1px solid var(--light);line-height:1.4;}
+.other-a:last-child{border-bottom:none;padding-bottom:0;}
+.art h2{font-size:20px;font-weight:700;color:var(--navy);margin:2.5rem 0 .9rem;padding-left:14px;border-left:4px solid var(--orange);line-height:1.3;scroll-margin-top:80px;}
+.art h3{font-size:16px;font-weight:600;color:var(--navy);margin:1.75rem 0 .6rem;}
+.art p{margin-bottom:1.2rem;color:var(--dark);line-height:1.8;}
+.art ul,.art ol{padding-left:1.4rem;margin-bottom:1.2rem;}
+.art li{margin-bottom:.5rem;line-height:1.7;}
+.art strong{color:var(--navy);font-weight:600;}
+.art a{color:var(--blue);text-decoration:underline;text-underline-offset:3px;}
+.art table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:13px;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(10,15,30,.06);}
+.art th{background:var(--navy);color:white;padding:12px 14px;text-align:left;font-weight:600;font-size:12px;}
+.art td{padding:10px 14px;border-bottom:1px solid var(--light);}
+.art tr:nth-child(even) td{background:var(--pale);}
+.callout{border-radius:0 var(--r) var(--r) 0;padding:1.1rem 1.4rem;margin:1.5rem 0;border-left:4px solid var(--orange);background:#FFF8F4;}
+.callout.teal{border-left-color:var(--teal);background:#EAF3DE;}
+.callout.blue{border-left-color:var(--blue);background:#EBF2FF;}
+.callout p{margin:0;font-size:14px;}
+.cta-box{background:var(--navy);border-radius:var(--r);padding:1.75rem 2rem;margin:2.5rem 0 0;display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap;border-top:4px solid var(--orange);}
+.cta-box h3{font-size:17px;font-weight:700;color:white;margin-bottom:.3rem;}
+.cta-box p{font-size:13px;color:rgba(255,255,255,.6);margin:0;}
+.cta-box a{background:white;color:var(--navy);padding:10px 20px;border-radius:50px;font-weight:700;font-size:13px;text-decoration:none;white-space:nowrap;}
+footer{background:var(--navy);color:rgba(255,255,255,.4);text-align:center;padding:1.5rem;font-size:13px;margin-top:3rem;}
+footer a{color:rgba(255,255,255,.6);text-decoration:none;margin:0 .75rem;}
+@media(max-width:860px){.cols{flex-direction:column;}.sdb{position:static;width:100%;min-width:0;max-width:100%;flex:none;}.hero h1{font-size:24px;}}
+</style>
+</head>
+<body>
+<nav>
+  <a class="back" href="../index.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>Retour au site</a>
+  <a class="ncta" href="../index.html#contact">Audit gratuit</a>
+</nav>
+<div class="hero">
+  <div class="pill">Gestion IT</div>
+  <h1>Infogérance vs DSI interne : ce qui change vraiment pour une TPE</h1>
+  <div class="meta"><span>📅 19 mai 2026</span><span>⏱ 6 min de lecture</span><span>📍 NetRelais · Uzerche, Corrèze</span></div>
+</div>
+<div class="outer">
+  <div class="cols">
+    <article class="art" id="art">
+      <p>Votre entreprise grandit, vos besoins IT évoluent, et vous vous posez la question : vaut-il mieux recruter un informaticien en interne ou faire appel à un prestataire d'infogérance ? C'est l'une des décisions les plus structurantes pour une TPE ou PME — et la réponse dépend bien plus de votre contexte que d'une règle universelle.</p>
+
+<h2 id="sec-0">Ce que coûte vraiment un informaticien interne</h2>
+<p>Beaucoup de dirigeants sous-estiment le coût total d'un salarié IT :</p>
+<table>
+  <tr><th>Poste de coût</th><th>Technicien junior</th><th>DSI confirmé</th></tr>
+  <tr><td>Salaire brut mensuel</td><td>2 200 €</td><td>4 500 €</td></tr>
+  <tr><td>Charges patronales (~45 %)</td><td>990 €</td><td>2 025 €</td></tr>
+  <tr><td>Formation (÷12)</td><td>150 €</td><td>300 €</td></tr>
+  <tr><td>Matériel & licences</td><td>100 €</td><td>200 €</td></tr>
+  <tr><td><strong>Coût total mensuel</strong></td><td><strong>~3 540 €</strong></td><td><strong>~7 225 €</strong></td></tr>
+</table>
+<div class="callout"><p>⚠️ <strong>Le risque de dépendance :</strong> quand votre informaticien est en vacances, en arrêt maladie ou démissionne, votre infrastructure n'est plus couverte. La continuité de service n'est garantie par personne.</p></div>
+
+<h2 id="sec-1">Ce que coûte l'infogérance</h2>
+<p>L'infogérance se facture au poste, proportionnelle à votre taille réelle. Pour 15 postes :</p>
+<table>
+  <tr><th>Offre</th><th>Prix/poste</th><th>Total 15 postes</th><th>Réactivité</th></tr>
+  <tr><td>Net'Start</td><td>17 € HT</td><td>255 € HT/mois</td><td>24h</td></tr>
+  <tr><td>Net'Boost</td><td>25 € HT</td><td>375 € HT/mois</td><td>12h</td></tr>
+  <tr><td>Net'Max</td><td>35 € HT</td><td>525 € HT/mois</td><td>4h</td></tr>
+</table>
+<p>Même l'offre la plus complète (525 €/mois) représente <strong>moins de 15 % du coût d'un technicien junior</strong>. Et vous bénéficiez d'une équipe avec des compétences complémentaires.</p>
+
+<h2 id="sec-2">Avantages et limites du salarié interne</h2>
+<p><strong>✅ Points forts :</strong></p>
+<ul>
+  <li>Connaissance approfondie de votre environnement</li>
+  <li>Présence physique permanente</li>
+  <li>Réactivité immédiate pour les petits problèmes quotidiens</li>
+</ul>
+<p><strong>❌ Points faibles :</strong></p>
+<ul>
+  <li>Coût très élevé pour les structures de moins de 30 postes</li>
+  <li>Compétences limitées à un seul profil</li>
+  <li>Aucune continuité en cas d'absence</li>
+  <li>Difficile à recruiter et fidéliser (forte tension marché IT)</li>
+</ul>
+
+<h2 id="sec-3">Avantages et limites de l'infogérance</h2>
+<p><strong>✅ Points forts :</strong></p>
+<ul>
+  <li>Coût maîtrisé et prévisible, sans surprise</li>
+  <li>Accès à une équipe aux compétences multiples</li>
+  <li>Continuité de service garantie par contrat (SLA)</li>
+  <li>Sans engagement, adaptable à votre croissance</li>
+</ul>
+<p><strong>❌ Points faibles :</strong></p>
+<ul>
+  <li>Moins de présence physique quotidienne (sauf formule Max)</li>
+  <li>Nécessite un bon onboarding au démarrage</li>
+</ul>
+<div class="callout teal"><p>✅ <strong>La solution hybride :</strong> certaines entreprises d'une trentaine de postes combinent un prestataire d'infogérance pour la supervision et un référent interne pour le quotidien. C'est souvent la combinaison la plus efficace.</p></div>
+
+<h2 id="sec-4">À partir de combien de postes recruter en interne ?</h2>
+<p>La question se pose généralement à partir de <strong>50 à 80 postes</strong>, quand le volume de demandes justifie une personne dédiée à temps plein. En dessous, l'infogérance est presque toujours plus économique et plus efficace.</p>
+
+<h2 id="sec-5">Comment démarrer avec un prestataire ?</h2>
+<ol>
+  <li><strong>Audit initial</strong> — inventaire de votre infrastructure, documentation des accès (1 à 2 jours)</li>
+  <li><strong>Mise en place des outils</strong> — supervision, sauvegarde, accès distant sécurisé (1 semaine)</li>
+  <li><strong>Démarrage du contrat</strong> — interlocuteur dédié, numéro direct, tableau de bord de suivi</li>
+</ol>
+<p>Chez NetRelais, l'audit initial est <strong>offert et sans engagement</strong>. C'est le meilleur moyen de voir concrètement ce que l'infogérance peut apporter, avant de signer quoi que ce soit.</p>
+      <div class="cta-box">
+        <div><h3>Un projet IT ? Parlons-en.</h3><p>Audit gratuit — 1h, sans engagement, en Nouvelle-Aquitaine.</p></div>
+        <a href="../index.html#contact">Demander mon audit →</a>
+      </div>
+    </article>
+    <aside class="sdb">
+      <div class="sbc dark"><h4>🎯 Audit gratuit</h4><p class="sb-desc">TPE/PME en Nouvelle-Aquitaine ? 1h gratuite.</p><a class="sb-btn" href="../index.html#contact">Prendre rendez-vous</a></div>
+      <div class="sbc"><h4>📞 Contact</h4><a class="sb-phone" href="tel:+33610796440">06 10 79 64 40</a><p class="sb-hrs">Lun–Ven · 9h–18h</p><a class="sb-mail" href="mailto:contact@netrelais.fr">contact@netrelais.fr</a></div>
+      <div class="sbc"><h4>📖 Autres articles</h4><a href="pourquoi-externaliser-informatique-pme-correze.html" class="other-a">Pourquoi externaliser son IT en Corrèze ?</a>
+<a href="ransomware-proteger-entreprise-5-etapes.html" class="other-a">Ransomware : 5 étapes pour se protéger</a>
+</div>
+    </aside>
+  </div>
+</div>
+<footer>
+  <a href="../index.html">← Retour au site</a>
+  <a href="../index.html#offres">Nos offres</a>
+  <a href="mailto:contact@netrelais.fr">contact@netrelais.fr</a>
+  <p style="margin-top:.75rem;">© 2026 NetRelais · Uzerche, Corrèze</p>
+</footer>
+
+</body>
+</html>
